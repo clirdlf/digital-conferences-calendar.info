@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="A comprehensive international calendar of conferences and symposia on digital work in museums, libraries, archives, and the humanities." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.min.css" rel="stylesheet" >
+    <link href='//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.print.css' rel='stylesheet' media='print' />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header>
+        <h1><a href="/">Digital Conferences Calendar</a></h1>
+        <p>Conferences for Digital Humanities, Digital Archives, Digital Libraries, and Digital Museums.</p>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <section class="section">
+                    <p>
+                        <a class="btn btn-success" role="button" href="http://www.google.com/calendar/ical/g2hval0pee3rmrv4f3n9hp9cok%40group.calendar.google.com/public/basic.ics"><i class="fa fa-calendar-plus-o"></i> Download</a>
+                        <a class="btn btn-info" role="button" href="http://www.google.com/calendar/embedhelper?src=g2hval0pee3rmrv4f3n9hp9cok%40group.calendar.google.com&ctz=America/New_York"><i class="fa fa-code"></i> Embed</a>
+                    </p>
+
+                    <div id="loading">loading...</div>
+                    <div id="calendar"></div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="section bg-gray">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6">
+                    <h5>Contact</h5>
+                    <address>
+                            CLIR+DLF<br>
+                            1707 L St. NW,<br>
+                            Suite 650 <br>
+                            Washington, DC 20036 <br>
+                            <abbr title="Phone">P:</abbr>  (202) 939-4750 <br>
+                            <abbr title="Email">E:</abbr> <a href="mailto:info@diglib.org">info@diglib.org</a>
+                        </address>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <h5>Social</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://twitter.com/CLIRDLF"><i class="fa fa-twitter"></i> Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/playlist?list=PLEA69BE43AA9F7E68&amp;feature=plcp"><i class="fa fa-youtube"></i> Youtube</a>
+                        </li>
+                        <li>
+                            <a href="https://www.diglib.org/"><i class="fa fa-rss"></i> Blog</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/groups/3387265/profile"><i class="fa fa-linkedin"></i> LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <p class="logo">
+                        <a href="/">Digital Conference Calendar</a>
+                    </p>
+                    <p>
+                        The Digital Conference Calendar is proudly hosted by the <a href="https://diglib.org">Digital Library Federation</a> at <a href="http://clir.org/">CLIR</a>.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="footer-alt">
+                        <p class="pull-right">
+                            All content on this site is available for re-use under a <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">CC BY-SA 4.0 License</a>.
+                        </p>
+                        <p class="logo">
+                            <a href="http://diglib.org"><i class="icon-dlf-logo blue"></i><span class="dlf">DLF</span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- /container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
