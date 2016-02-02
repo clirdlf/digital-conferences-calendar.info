@@ -69,7 +69,7 @@ header {
   padding: 60px 50px 100px 50px;
   text-align: center;
   color: #fff;
-  background: url("/img/back.jpg") no-repeat center center;
+  background: url("../img/back.jpg") no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); }
