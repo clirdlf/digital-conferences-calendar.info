@@ -23,6 +23,12 @@
 .blue {
   color: #0165AE; }
 
+.dlf {
+  font-family: 'Crimson Text', serif;
+  color: #00040c; }
+  .dlf span {
+    font-size: 24px; }
+
 #loading {
   display: none;
   position: absolute;
@@ -103,7 +109,7 @@ footer h5 {
   font-weight: 700;
   letter-spacing: 1px; }
 footer a {
-  color: #00040c; }
+  color: #97a0af; }
   footer a:hover {
     color: #560319; }
 footer ul li {
@@ -117,5 +123,13 @@ footer .footer-alt {
     margin-bottom: 0; }
     footer .footer-alt .logo i {
       margin-right: 5px; }
+footer .twitter {
+  color: #4099FF; }
+footer .linkedin {
+  color: #0177B5; }
+footer .rss {
+  color: #F17330; }
+footer .envelope {
+  color: #D83232; }
 
 /*# sourceMappingURL=main.css.map */

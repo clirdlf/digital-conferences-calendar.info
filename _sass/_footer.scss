@@ -2,8 +2,6 @@
 
 // footer
 footer {
-
-
   h5 {
     color: #333;
     font-size: 15px;
@@ -12,8 +10,8 @@ footer {
     letter-spacing: 1px;
   }
   a {
-    // color: #97a0af;
-		color: #00040c;
+    color: #97a0af;
+		// color: #00040c;
     &:hover {
       color: $link_color;
     }
@@ -34,4 +32,9 @@ footer {
       }
     }
   }
+
+  .twitter { color: $twitter-blue; }
+  .linkedin { color: $linkedin-blue; }
+  .rss { color: $rss-orange; }
+  .envelope { color: $envelope-red; }
 }
