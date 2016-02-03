@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     eventClick: function(event) {
       // opens events in a popup window
-      window.open(event.url, 'gcalevent', 'width=100%,height=600');
+      window.open(event.url, 'gcalevent', 'width=700,height=600');
       return false;
     },
 
