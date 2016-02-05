@@ -20,6 +20,22 @@ header {
       &:hover {
         color: #fff;
       }
+
+      i {
+        display:block;
+        padding-top: 18px;
+      	font-size:58px;
+      	text-align:center;
+      	width:94px;
+      	height:94px;
+      	line-height:72px;
+      	border-radius:100%;
+      	margin:10px auto;
+      	font-weight:300;
+      	background:rgba(0,0,0,0.1);
+      	box-shadow:inset 0px 0px 5px rgba(0,0,0,0.1);
+      	border:2px solid rgba(255,255,255,0.2);
+      }
     }
 
 
