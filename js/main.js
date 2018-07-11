@@ -48,7 +48,7 @@ $(document).ready(function() {
             {
                 googleCalendarId: '1nlqihbdhsca7r7npe93so66kk@group.calendar.google.com',
                 className: 'dlf-zoom',
-                color: 'orange',
+                color: '#EF6C00',
             }
         ],
 
