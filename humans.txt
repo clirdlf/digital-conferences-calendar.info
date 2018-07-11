@@ -3,11 +3,12 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Wayne Graham -- Developer
 
 # THANKS
 
-    <name>
+    DLF Community
+
 
 # TECHNOLOGY COLOPHON
 

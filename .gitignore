@@ -3,3 +3,5 @@
 node_modules
 _sass/*.css
 .sass-cache
+
+_site/
