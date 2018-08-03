@@ -1,3 +1,13 @@
+(function(){
+  'use strict';
+
+  var z_account = "E17D945D-B632-4031-BDA8-ED8F260A04F0";
+  var z_collector = "clir.informz.net";
+  var z_cookieDomain = ".digital-conferences-calendar.info";
+
+  (function (e, o, n, r, t, a, s) { e[t] || (e.GlobalSnowplowNamespace = e.GlobalSnowplowNamespace || [], e.GlobalSnowplowNamespace.push(t), e[t] = function () { (e[t].q = e[t].q || []).push(arguments) }, e[t].q = e[t].q || [], a = o.createElement(n), s = o.getElementsByTagName(n)[0], a.async = 1, a.src = r, s.parentNode.insertBefore(a, s)) }(window, document, "script", "https://"+z_collector+"/web_trk/sp.js", "informz_trk")), informz_trk("newTracker", "infz", z_collector + "/web_trk/collector/", { appId: z_account, cookieDomain: z_cookieDomain }), informz_trk("setUserIdFromLocation", "_zs"), informz_trk("enableActivityTracking", 30, 15); informz_trk("trackPageView", null);
+})();
+
 $(document).ready(function() {
     var initialLocaleCode = 'en';
 
