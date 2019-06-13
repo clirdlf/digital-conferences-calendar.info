@@ -5,3 +5,4 @@ _sass/*.css
 .sass-cache
 
 _site/
+package-lock.json
