@@ -6,3 +6,4 @@ _sass/*.css
 
 _site/
 package-lock.json
+.DS_Store
