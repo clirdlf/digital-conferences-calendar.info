@@ -11,12 +11,6 @@ function clean() {
 }
 
 function modules() {
-    var bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
-        .pipe(gulp.dest('./vendor/bootstrap'));
-    var jquery = gulp.src([
-            './node_modules/jquery/dist/*',
-        ])
-        .pipe(gulp.dest('./vendor/jquery'));
     var fullcalendar_core = gulp.src(
         './node_modules/@fullcalendar/core/**/*',
     ).pipe(gulp.dest('./vendor/fullcalendar/core'));
@@ -33,7 +27,7 @@ function modules() {
         './node_modules/@fullcalendar/bootstrap/**/*',
     ).pipe(gulp.dest('./vendor/fullcalendar/bootstrap'));
 
-    return merge(bootstrap, jquery, fullcalendar_core, fullcalendar_daydrid, fullcalendar_gcal);
+    return merge(fullcalendar_core, fullcalendar_daydrid, fullcalendar_gcal);
 }
 
 const vendor = gulp.series(clean, modules);
