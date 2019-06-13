@@ -4,17 +4,9 @@ Web interface wrapping the Digital Conferences Google Calendar.
 
 ## Installing
 
-This site uses SCSS for styles. You'll need the `sass` gem.
+This uses `jekyll` for the build (but there's only one page).
 
-```
-$ gem install sass
-```
-
-You can then have the SCSS automagically compile when you save with:
-
-```
-$ sass --watch _sass:css
-```
+    jekyll serve -l
 
 ## Adding additional calendars
 
@@ -24,6 +16,7 @@ You can add additional `eventSources` to the calendar in `js/main.js`. Find the 
 eventSources: [{
     googleCalendarId: 'g2hval0pee3rmrv4f3n9hp9cok@group.calendar.google.com',
     className: 'dlf-community-events',
+    color: '#3a87ad'
   },
   {
     googleCalendarId: '1nlqihbdhsca7r7npe93so66kk@group.calendar.google.com',
