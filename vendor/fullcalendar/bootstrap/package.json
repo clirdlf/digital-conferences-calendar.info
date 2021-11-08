@@ -1,62 +1,33 @@
 {
-  "_from": "@fullcalendar/bootstrap",
-  "_id": "@fullcalendar/bootstrap@4.2.0",
-  "_inBundle": false,
-  "_integrity": "sha512-yavoxeP13f7MCeSuEk9aQHd0z82yvENw3yjbxZZHBtIY1/E/FOPZRGZYFmwffIvvz7AOs9W+Pt6hxzFLsPW02Q==",
-  "_location": "/@fullcalendar/bootstrap",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "@fullcalendar/bootstrap",
-    "name": "@fullcalendar/bootstrap",
-    "escapedName": "@fullcalendar%2fbootstrap",
-    "scope": "@fullcalendar",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/@fullcalendar/bootstrap/-/bootstrap-4.2.0.tgz",
-  "_shasum": "8ddf310e3247502ff49a1ec852eb84d443cc942b",
-  "_spec": "@fullcalendar/bootstrap",
-  "_where": "/Users/wgraham/projects/digital-conferences-calendar.info",
-  "author": {
-    "name": "Adam Shaw",
-    "email": "arshaw@arshaw.com",
-    "url": "http://arshaw.com/"
-  },
-  "bugs": {
-    "url": "https://fullcalendar.io/reporting-bugs"
-  },
-  "bundleDependencies": false,
-  "copyright": "2019 Adam Shaw",
-  "deprecated": false,
+  "name": "@fullcalendar/bootstrap",
+  "version": "4.4.2",
+  "title": "FullCalendar Bootstrap Plugin",
   "description": "Bootstrap 4 theming for your calendar",
-  "docs": "https://fullcalendar.io/docs/bootstrap-theme",
-  "homepage": "https://fullcalendar.io/",
   "keywords": [
     "calendar",
     "event",
     "full-sized"
   ],
-  "license": "MIT",
-  "main": "main.js",
-  "name": "@fullcalendar/bootstrap",
-  "peerDependencies": {
-    "@fullcalendar/core": "~4.2.0"
-  },
-  "releaseDate": "2019-06-02",
+  "homepage": "https://fullcalendar.io/",
+  "docs": "https://fullcalendar.io/docs/bootstrap-theme",
+  "bugs": "https://fullcalendar.io/reporting-bugs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fullcalendar/fullcalendar.git",
+    "url": "https://github.com/fullcalendar/fullcalendar.git",
     "homepage": "https://github.com/fullcalendar/fullcalendar"
   },
-  "title": "FullCalendar Bootstrap Plugin",
-  "types": "main.d.ts",
+  "license": "MIT",
+  "author": {
+    "name": "Adam Shaw",
+    "email": "arshaw@arshaw.com",
+    "url": "http://arshaw.com/"
+  },
+  "copyright": "2019 Adam Shaw",
+  "peerDependencies": {
+    "@fullcalendar/core": "~4.4.0"
+  },
+  "main": "main.js",
+  "module": "main.esm.js",
   "unpkg": "main.min.js",
-  "version": "4.2.0"
+  "types": "main.d.ts"
 }

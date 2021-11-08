@@ -27,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/clirdlf/digital-conferences-calendar.info/issues"
   },
-  "homepage": "http://digital-conferences-calendar.info"
+  "homepage": "http://digital-conferences-calendar.info",
+  "packageManager": "yarn@3.1.0"
 }
