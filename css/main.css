@@ -86,7 +86,7 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.03em; }
     header h1 a {
-      color: #fff; }
+      color: #fff; text-decoration: none;}
       header h1 a:hover {
         color: #fff; }
       header h1 a i {
