@@ -21,8 +21,8 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
 end
 
-gem 'html-proofer'
-gem 'ra11y'
+# gem 'html-proofer'
+# gem 'ra11y'
 gem 'webrick'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
