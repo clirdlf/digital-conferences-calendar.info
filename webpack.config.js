@@ -1,5 +1,7 @@
 // https://getbootstrap.com/docs/5.2/getting-started/webpack/
 const path = require('path')
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
 
 module.exports = {
   entry: './src/js/main.js',
@@ -15,13 +17,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: [
+          // { loader: MiniCssExtractPlugin.loader },
+          { loader: 'css-loader', options: { importLoaders: 1 } }
+        ]
+      },
+      {
         test: /\.(scss)$/,
         use: [
           {
             loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
           },
           {
             loader: 'postcss-loader',

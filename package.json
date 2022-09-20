@@ -10,7 +10,8 @@
     "@fullcalendar/google-calendar": "^5.11.2",
     "@fullcalendar/list": "^5.11.2",
     "@popperjs/core": "^2.11.5",
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.0",
+    "mini-css-extract-plugin": "^2.6.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
@@ -21,7 +22,7 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.3"
+    "webpack-dev-server": "^4.10.0"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js",
