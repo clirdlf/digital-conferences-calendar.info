@@ -1,0 +1,11 @@
+// @see https://getbootstrap.com/docs/5.2/customize/sass/ to customize colors
+// https://getbootstrap.com/docs/5.2/customize/color/ for colors 
+@import "variables";
+
+$primary: $dlf-blue;
+$info: #00819b;
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "base";
+

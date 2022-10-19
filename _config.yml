@@ -1,9 +1,0 @@
-plugins:
-  - jekyll-sitemap
-
-defaults:
-  -
-    scope:
-      path: "vendor/**/*"
-    values:
-      sitemap: false

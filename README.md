@@ -1,27 +1,24 @@
 # Digital Conferences Calendar
 
-Web interface wrapping the Digital Conferences Google Calendar.
+Web interface wrapping the Digital Conferences Google Calendar built using es6 build system.
 
-## Installing
+## Development
 
-This uses `jekyll` for the build (but there's only one page).
+* Clone the repo
+* Install the dependencies (`npm install`)
+* Start the web server (`npm start`)
+* Edit
+* Build for production (`npm run build`)
+* Push (`git push`)
 
-    jekyll serve -l
+## Bootstrap
 
-## Adding additional calendars
+This was the starting template for the Bootstrap 5 build system: https://getbootstrap.com/docs/5.2/getting-started/webpack/
 
-You can add additional `eventSources` to the calendar in `js/main.js`. Find the [eventSources](https://fullcalendar.io/docs/eventSources) and add a new [Event Source Object](https://fullcalendar.io/docs/event-source-object).
+Documentation on FullCalender [bootstrap theme](https://fullcalendar.io/docs/bootstrap5).
 
-```javascript
-eventSources: [{
-    googleCalendarId: 'g2hval0pee3rmrv4f3n9hp9cok@group.calendar.google.com',
-    className: 'dlf-community-events',
-    color: '#3a87ad'
-  },
-  {
-    googleCalendarId: '1nlqihbdhsca7r7npe93so66kk@group.calendar.google.com',
-    className: 'dlf-zoom',
-    color: '#EF6C00',
-  }
-],
-```
+And the [FullCalendar Documentation](https://fullcalendar.io/)
+
+## Google Calendar
+
+See [FullCalendar docs](https://fullcalendar.io/docs/google-calendar) (especially the setup for API calls)

@@ -1,25 +1,42 @@
-// https://getbootstrap.com/docs/5.2/getting-started/webpack/
 const path = require('path')
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
+const miniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/js/main.js',
+  plugins: [
+    new miniCssExtractPlugin(), 
+    new HtmlWebpackPlugin({ 
+      template: './src/index.html',
+      favicon: './src/favicon.ico'
+    })
+  ],
+  resolve: {
+    extensions: [ '.js' ]
+  },
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'docs'),
   },
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
+    static: path.resolve(__dirname, 'docs'),
     port: 8080,
     hot: true
   },
   module: {
     rules: [
+
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name]-[hash][ext]'
+        }
+      },
       {
         test: /\.css$/,
         use: [
-          // { loader: MiniCssExtractPlugin.loader },
+          { loader: miniCssExtractPlugin.loader },
           { loader: 'css-loader', options: { importLoaders: 1 } }
         ]
       },
@@ -27,7 +44,11 @@ module.exports = {
         test: /\.(scss)$/,
         use: [
           {
-            loader: 'style-loader'
+            // loader: 'style-loader'
+            loader: miniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader'
           },
           {
             loader: 'postcss-loader',
