@@ -28,13 +28,13 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@fullcalendar/bootstrap5": "^6.0.0",
-    "@fullcalendar/core": "^6.0.0",
-    "@fullcalendar/daygrid": "^6.0.0",
-    "@fullcalendar/google-calendar": "^6.0.0",
-    "@fullcalendar/interaction": "^6.0.0",
-    "@fullcalendar/list": "^6.0.0",
-    "@fullcalendar/timegrid": "^6.0.0",
+    "@fullcalendar/bootstrap5": "^6.1.0",
+    "@fullcalendar/core": "^6.1.0",
+    "@fullcalendar/daygrid": "^6.1.0",
+    "@fullcalendar/google-calendar": "^6.1.0",
+    "@fullcalendar/interaction": "^6.1.0",
+    "@fullcalendar/list": "^6.1.0",
+    "@fullcalendar/timegrid": "^6.1.0",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.10.0"
