@@ -2,6 +2,10 @@
 
 Web interface wrapping the Digital Conferences Google Calendar built using es6 build system.
 
+## CNAME
+
+Be sure the CNAME file gets copied into docs (after running `npm run clean`)
+
 ## Development
 
 * Clone the repo
@@ -13,7 +17,7 @@ Web interface wrapping the Digital Conferences Google Calendar built using es6 b
 
 ## Bootstrap
 
-This was the starting template for the Bootstrap 5 build system: https://getbootstrap.com/docs/5.2/getting-started/webpack/
+This was the starting template for the Bootstrap 5 build system: <https://getbootstrap.com/docs/5.3/getting-started/webpack/>
 
 Documentation on FullCalender [bootstrap theme](https://fullcalendar.io/docs/bootstrap5).
 
