@@ -55,6 +55,7 @@ module.exports = {
             options: {
               postcssOptions: {
                 plugins: () => [
+                  require('precss'),
                   require('autoprefixer')
                 ]
               }
