@@ -1,15 +1,17 @@
 const path = require('path')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/js/main.js',
   plugins: [
-    new miniCssExtractPlugin(), 
-    new HtmlWebpackPlugin({ 
+    new miniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
       template: './src/index.html',
       favicon: './src/favicon.ico'
-    })
+    }),
+    new webpack.EnvironmentPlugin(['GOOGLE_CALENDAR_API_KEY'])
   ],
   resolve: {
     extensions: [ '.js' ]
