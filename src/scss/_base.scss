@@ -1,7 +1,6 @@
-@import "variables";
+@use "variables" as *;
 
 $clir: #9a1c46;
-$dlf-blue: #236DA3;
 
 .bi-heart-fill {
     color: $clir;
