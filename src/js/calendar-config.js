@@ -1,5 +1,3 @@
-const GOOGLE_CALENDAR_API_KEY = 'AIzaSyA5W2MDJs9uknQv6Cn4OZ07K-wtvkoqYwE';
-
 function getEventSources() {
   return [
     {
@@ -15,7 +13,7 @@ function getEventSources() {
   ];
 }
 
-function createCalendarOptions(plugins) {
+function createCalendarOptions(plugins, googleCalendarApiKey) {
   return {
     plugins,
     themeSystem: 'bootstrap5',
@@ -24,7 +22,7 @@ function createCalendarOptions(plugins) {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
-    googleCalendarApiKey: GOOGLE_CALENDAR_API_KEY,
+    googleCalendarApiKey,
     navLinks: true,
     editable: true,
     dayMaxEvents: true,
@@ -33,7 +31,6 @@ function createCalendarOptions(plugins) {
 }
 
 module.exports = {
-  GOOGLE_CALENDAR_API_KEY,
   createCalendarOptions,
   getEventSources
 };

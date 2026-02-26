@@ -17,6 +17,8 @@ import calendarConfig from './calendar-config';
 
 document.addEventListener('DOMContentLoaded', function() {
   const calendarEl = document.getElementById('calendar');
+  const apiKeyMeta = document.querySelector('meta[name="google-calendar-api-key"]');
+  const googleCalendarApiKey = apiKeyMeta ? apiKeyMeta.content : '';
   const plugins = [
     interactionPlugin,
     bootstrap5Plugin,
@@ -25,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     timeGridPlugin,
     listPlugin
   ];
-  const options = calendarConfig.createCalendarOptions(plugins);
+  const options = calendarConfig.createCalendarOptions(plugins, googleCalendarApiKey);
   const calendar = new Calendar(calendarEl, options);
 
   calendar.render();

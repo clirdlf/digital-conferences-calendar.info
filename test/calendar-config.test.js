@@ -2,7 +2,6 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 
 const {
-  GOOGLE_CALENDAR_API_KEY,
   createCalendarOptions,
   getEventSources
 } = require('../src/js/calendar-config');
@@ -26,11 +25,12 @@ test('getEventSources returns expected calendar feeds', () => {
 
 test('createCalendarOptions preserves expected FullCalendar defaults', () => {
   const plugins = ['plugin-a', 'plugin-b'];
-  const options = createCalendarOptions(plugins);
+  const apiKey = 'test-api-key';
+  const options = createCalendarOptions(plugins, apiKey);
 
   assert.equal(options.plugins, plugins);
   assert.equal(options.themeSystem, 'bootstrap5');
-  assert.equal(options.googleCalendarApiKey, GOOGLE_CALENDAR_API_KEY);
+  assert.equal(options.googleCalendarApiKey, apiKey);
   assert.equal(options.navLinks, true);
   assert.equal(options.editable, true);
   assert.equal(options.dayMaxEvents, true);
