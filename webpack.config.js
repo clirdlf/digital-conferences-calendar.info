@@ -1,7 +1,31 @@
 const path = require('path')
+const fs = require('fs')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+
+function readDotEnv(filePath) {
+  if (!fs.existsSync(filePath)) return {};
+
+  const env = {};
+  const lines = fs.readFileSync(filePath, 'utf8').split(/\r?\n/);
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+
+    const separatorIndex = trimmed.indexOf('=');
+    if (separatorIndex === -1) continue;
+
+    const key = trimmed.slice(0, separatorIndex).trim();
+    let value = trimmed.slice(separatorIndex + 1).trim();
+    value = value.replace(/^['"]|['"]$/g, '');
+    env[key] = value;
+  }
+
+  return env;
+}
+
+const envVars = readDotEnv(path.resolve(__dirname, '.env'));
 
 module.exports = {
   entry: './src/js/main.js',
@@ -9,9 +33,9 @@ module.exports = {
     new miniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      favicon: './src/favicon.ico'
-    }),
-    new webpack.EnvironmentPlugin(['GOOGLE_CALENDAR_API_KEY'])
+      favicon: './src/favicon.ico',
+      googleCalendarApiKey: envVars.GOOGLE_CALENDAR_API_KEY || ''
+    })
   ],
   resolve: {
     extensions: [ '.js' ]
@@ -64,7 +88,12 @@ module.exports = {
             }
           },
           {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                quietDeps: true
+              }
+            }
           }
         ]
       }
