@@ -2,6 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 function readDotEnv(filePath) {
   if (!fs.existsSync(filePath)) return {};
@@ -29,8 +30,8 @@ const envVars = readDotEnv(path.resolve(__dirname, '.env'));
 module.exports = {
   entry: './src/js/main.js',
   plugins: [
-    new miniCssExtractPlugin(), 
-    new HtmlWebpackPlugin({ 
+    new miniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
       template: './src/index.html',
       favicon: './src/favicon.ico',
       googleCalendarApiKey: envVars.GOOGLE_CALENDAR_API_KEY || ''
