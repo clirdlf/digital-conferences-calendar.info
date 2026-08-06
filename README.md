@@ -2,9 +2,9 @@
 
 Web interface wrapping the Digital Conferences Google Calendar built using es6 build system.
 
-## CNAME
+## Deployment output
 
-The `build` script automatically copies the `CNAME` file into `docs/`.
+The `build` script recreates `docs/` from scratch and copies `CNAME` and `.nojekyll` into it. Do not edit files in `docs/` directly; make changes in `src/` or the root deployment files and rebuild instead.
 
 ## Development
 

@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs')
+const CopyPlugin = require('copy-webpack-plugin')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
@@ -31,6 +32,12 @@ module.exports = {
   entry: './src/js/main.js',
   plugins: [
     new miniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, 'CNAME'), to: '[name][ext]' },
+        { from: path.resolve(__dirname, '.nojekyll'), to: '[name][ext]' }
+      ]
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       favicon: './src/favicon.ico',
@@ -43,6 +50,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'docs'),
+    clean: true
   },
   devServer: {
     static: path.resolve(__dirname, 'docs'),
