@@ -15,7 +15,7 @@ import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import listPlugin from 'fullcalendar/list';
 import 'fullcalendar/skeleton.css';
 import '@fullcalendar/bootstrap5/theme.css';
-import calendarConfig from './calendar-config';
+import calendarInitialization from './calendar-initialization';
 
 document.addEventListener('DOMContentLoaded', function() {
   const calendarEl = document.getElementById('calendar');
@@ -29,8 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
     timeGridPlugin,
     listPlugin
   ];
-  const options = calendarConfig.createCalendarOptions(plugins, googleCalendarApiKey);
-  const calendar = new Calendar(calendarEl, options);
-
-  calendar.render();
+  calendarInitialization.initializeCalendar({
+    Calendar,
+    calendarEl,
+    plugins,
+    googleCalendarApiKey
+  });
 });
