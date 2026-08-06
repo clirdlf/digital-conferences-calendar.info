@@ -1,9 +1,8 @@
 const path = require('path')
 const fs = require('fs')
 const CopyPlugin = require('copy-webpack-plugin')
-const miniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 function readDotEnv(filePath) {
   if (!fs.existsSync(filePath)) return {};
@@ -31,7 +30,7 @@ const envVars = readDotEnv(path.resolve(__dirname, '.env'));
 module.exports = {
   entry: './src/js/main.js',
   plugins: [
-    new miniCssExtractPlugin(),
+    new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [
         { from: path.resolve(__dirname, 'CNAME'), to: '[name][ext]' },
@@ -44,9 +43,6 @@ module.exports = {
       googleCalendarApiKey: envVars.GOOGLE_CALENDAR_API_KEY || ''
     })
   ],
-  resolve: {
-    extensions: [ '.js' ]
-  },
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'docs'),
@@ -59,7 +55,6 @@ module.exports = {
   },
   module: {
     rules: [
-
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
@@ -69,29 +64,18 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          { loader: miniCssExtractPlugin.loader },
-          { loader: 'css-loader', options: { importLoaders: 1 } }
-        ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
-        test: /\.(scss)$/,
+        test: /\.scss$/,
         use: [
-          {
-            // loader: 'style-loader'
-            loader: miniCssExtractPlugin.loader
-          },
-          {
-            loader: 'css-loader'
-          },
+          MiniCssExtractPlugin.loader,
+          'css-loader',
           {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: () => [
-                  require('precss'),
-                  require('autoprefixer')
-                ]
+                plugins: [require('autoprefixer')]
               }
             }
           },
