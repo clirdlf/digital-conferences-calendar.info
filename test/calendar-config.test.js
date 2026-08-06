@@ -1,10 +1,10 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
+import test from 'node:test';
+import assert from 'node:assert/strict';
 
-const {
+import {
   createCalendarOptions,
   getEventSources
-} = require('../src/js/calendar-config');
+} from '../src/js/calendar-config.js';
 
 test('getEventSources returns expected calendar feeds', () => {
   const sources = getEventSources();

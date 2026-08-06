@@ -1,6 +1,6 @@
-const { createCalendarOptions } = require('./calendar-config');
+import { createCalendarOptions } from './calendar-config.js';
 
-function initializeCalendar({ Calendar, calendarEl, plugins, googleCalendarApiKey }) {
+export function initializeCalendar({ Calendar, calendarEl, plugins, googleCalendarApiKey }) {
   const options = createCalendarOptions(plugins, googleCalendarApiKey);
   const calendar = new Calendar(calendarEl, options);
 
@@ -8,7 +8,3 @@ function initializeCalendar({ Calendar, calendarEl, plugins, googleCalendarApiKe
 
   return calendar;
 }
-
-module.exports = {
-  initializeCalendar
-};

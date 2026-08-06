@@ -1,7 +1,7 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
+import test from 'node:test';
+import assert from 'node:assert/strict';
 
-const { initializeCalendar } = require('../src/js/calendar-initialization');
+import { initializeCalendar } from '../src/js/calendar-initialization.js';
 
 test('initializeCalendar creates and renders a configured calendar', () => {
   const calendarEl = { id: 'calendar' };

@@ -1,4 +1,4 @@
-function getEventSources() {
+export function getEventSources() {
   return [
     {
       googleCalendarId: 'g2hval0pee3rmrv4f3n9hp9cok@group.calendar.google.com',
@@ -13,7 +13,7 @@ function getEventSources() {
   ];
 }
 
-function createCalendarOptions(plugins, googleCalendarApiKey) {
+export function createCalendarOptions(plugins, googleCalendarApiKey) {
   return {
     plugins,
     themeSystem: 'bootstrap5',
@@ -29,8 +29,3 @@ function createCalendarOptions(plugins, googleCalendarApiKey) {
     eventSources: getEventSources()
   };
 }
-
-module.exports = {
-  createCalendarOptions,
-  getEventSources
-};
