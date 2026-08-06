@@ -8,11 +8,19 @@ The `build` script automatically copies the `CNAME` file into `docs/`.
 
 ## Development
 
+This project uses pnpm. The supported pnpm version is declared in `package.json` and can be activated with [Corepack](https://nodejs.org/api/corepack.html):
+
+```sh
+corepack enable
+corepack install
+```
+
 * Clone the repo
-* Install the dependencies (`npm install`)
-* Start the web server (`npm start`)
-* Edit files in the `src/` directory and preview changes via `npm start`
-* Build for production (`npm run build`)
+* Install the dependencies (`pnpm install --frozen-lockfile`)
+* Start the web server (`pnpm start`)
+* Edit files in the `src/` directory and preview changes via `pnpm start`
+* Run the tests (`pnpm test`)
+* Build for production (`pnpm build`)
 * Push (`git push`)
 
 ## Bootstrap
