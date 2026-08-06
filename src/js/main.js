@@ -17,9 +17,11 @@ import 'fullcalendar/skeleton.css';
 import '@fullcalendar/bootstrap5/theme.css';
 import { initializeCalendar } from './calendar-initialization.js';
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const calendarEl = document.getElementById('calendar');
-  const apiKeyMeta = document.querySelector('meta[name="google-calendar-api-key"]');
+  const apiKeyMeta = document.querySelector(
+    'meta[name="google-calendar-api-key"]'
+  );
   const googleCalendarApiKey = apiKeyMeta ? apiKeyMeta.content : '';
   const plugins = [
     interactionPlugin,

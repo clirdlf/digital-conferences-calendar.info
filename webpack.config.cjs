@@ -1,8 +1,8 @@
-const path = require('node:path')
-const fs = require('node:fs')
-const CopyPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('node:path');
+const fs = require('node:fs');
+const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 function readDotEnv(filePath) {
   if (!fs.existsSync(filePath)) return {};
@@ -91,4 +91,4 @@ module.exports = {
       }
     ]
   }
-}
+};

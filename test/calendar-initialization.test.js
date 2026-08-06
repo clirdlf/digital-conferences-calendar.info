@@ -30,6 +30,9 @@ test('initializeCalendar creates and renders a configured calendar', () => {
   assert.equal(calendar instanceof FakeCalendar, true);
   assert.equal(constructorArguments[0], calendarEl);
   assert.equal(constructorArguments[1].plugins, plugins);
-  assert.equal(constructorArguments[1].googleCalendarApiKey, googleCalendarApiKey);
+  assert.equal(
+    constructorArguments[1].googleCalendarApiKey,
+    googleCalendarApiKey
+  );
   assert.equal(renderCalls, 1);
 });
