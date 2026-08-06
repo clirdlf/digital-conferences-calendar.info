@@ -5,14 +5,16 @@ import '../scss/styles.scss'
 import * as bootstrap from 'bootstrap'
 import "bootstrap-icons/font/bootstrap-icons.css"; // https://icons.getbootstrap.com/#usage
 
-import { Calendar } from '@fullcalendar/core';
-import interactionPlugin from '@fullcalendar/interaction';
+import { Calendar } from 'fullcalendar';
+import interactionPlugin from 'fullcalendar/interaction';
 import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
+import dayGridPlugin from 'fullcalendar/daygrid';
+import timeGridPlugin from 'fullcalendar/timegrid';
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
-import listPlugin from '@fullcalendar/list';
+import listPlugin from 'fullcalendar/list';
+import 'fullcalendar/skeleton.css';
+import '@fullcalendar/bootstrap5/theme.css';
 import calendarConfig from './calendar-config';
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -28,14 +28,12 @@
     "webpack-dev-server": "^5.2.6"
   },
   "dependencies": {
-    "@fullcalendar/bootstrap5": "^6.1.21",
-    "@fullcalendar/core": "^6.1.21",
-    "@fullcalendar/daygrid": "^6.1.21",
-    "@fullcalendar/google-calendar": "^6.1.21",
-    "@fullcalendar/interaction": "^6.1.21",
-    "@fullcalendar/list": "^6.1.21",
-    "@fullcalendar/timegrid": "^6.1.21",
+    "@fullcalendar/bootstrap5": "^7.0.2",
+    "@fullcalendar/core": "^7.0.2",
+    "@fullcalendar/google-calendar": "^7.0.2",
     "bootstrap": "^5.3.8",
-    "bootstrap-icons": "^1.13.1"
+    "bootstrap-icons": "^1.13.1",
+    "fullcalendar": "^7.0.2",
+    "temporal-polyfill": "^1.0.3"
   }
 }
