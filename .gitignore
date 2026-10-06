@@ -10,3 +10,4 @@ package-lock.json
 .yarn/
 .venv
 .env
+.pnpm-store

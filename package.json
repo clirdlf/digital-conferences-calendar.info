@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf docs/",
-    "start": "webpack serve --open --mode development",
+    "dev": "webpack serve --open --mode development",
     "build": "webpack build --mode production",
     "test": "node --test"
   },
