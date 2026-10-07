@@ -24,47 +24,58 @@
   </head>
   <body>
     <main>
-      <div class="page-container my-12">
-        <div class="-mx-3 flex flex-wrap items-center rounded-lg border border-line px-6 pt-6 pb-0 shadow-hero lg:pr-0 lg:pt-12">
-          <div class="w-full shrink-0 p-4 lg:w-7/12 lg:p-12 lg:pt-4">
-            <img class="mx-auto mb-6 block h-[57px] w-[72px] dlf-logo" src="https://cdn.jsdelivr.net/gh/clirdlf/logo-fonts@master/svg/dlf-logo.svg" width="72" height="57" alt="DLF logo">
-
-            <h1 class="mb-2 font-heading text-[min(3.5rem,calc(1.475rem+2.7vw))] leading-none font-bold">
-              DLF Community Calendar
-            </h1>
-            <p class="mb-4 text-xl leading-normal font-light">What's on in digital libraries &amp; archives, DH, museums &amp; cultural heritage, data curation, open
-              science, digital publishing &amp; more?
-            </p>
-            <div class="mb-6 grid gap-2 md:flex md:justify-start lg:mb-4">
-              <a href="mailto:info@diglib.org?subject=Community Calendar Request" class="action-button action-primary px-6 font-bold md:mr-2">
+      <div class="page-container my-6 sm:my-8">
+        <section class="hero overflow-hidden rounded-xl border border-line shadow-hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <img class="mb-4 block h-[38px] w-[48px] dlf-logo" src="https://cdn.jsdelivr.net/gh/clirdlf/logo-fonts@master/svg/dlf-logo.svg" width="48" height="38" alt="DLF logo">
+            <h1 id="page-title" class="mb-3 font-heading text-[clamp(1.75rem,3.5vw,2.75rem)] leading-[1.1] font-bold">DLF Community Calendar</h1>
+            <p class="mb-2 text-base leading-normal sm:text-lg">Discover events across digital libraries, archives, humanities, and open scholarship.</p>
+            <p class="mb-5 text-xs leading-relaxed text-muted sm:text-sm">Museums, cultural heritage, data curation, digital publishing, and more.</p>
+            <div class="grid grid-cols-2 items-center gap-3 sm:flex sm:flex-wrap">
+              <a href="mailto:info@diglib.org?subject=Community Calendar Request" class="action-button action-primary col-span-2 px-4 font-semibold">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
   <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
   <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-</svg> Add Your Event!
+</svg> Submit an event
               </a>
-              <a href="https://www.google.com/calendar/ical/g2hval0pee3rmrv4f3n9hp9cok%40group.calendar.google.com/public/basic.ics" class="action-button action-subscribe px-6"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
+              <a href="https://www.google.com/calendar/ical/g2hval0pee3rmrv4f3n9hp9cok%40group.calendar.google.com/public/basic.ics" class="action-button action-subscribe px-4"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
   <path d="M9 7a1 1 0 0 1 1-1h5v2h-5a1 1 0 0 1-1-1M1 9h4a1 1 0 0 1 0 2H1z"/>
   <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
 </svg> Subscribe</a>
-              <a target="_blank" href="https://calendar.google.com/calendar/b/1/embedhelper?src=g2hval0pee3rmrv4f3n9hp9cok%40group.calendar.google.com&ctz=America%2FNew_York" class="action-button action-embed px-6"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
+              <a target="_blank" rel="noopener" href="https://calendar.google.com/calendar/b/1/embedhelper?src=g2hval0pee3rmrv4f3n9hp9cok%40group.calendar.google.com&ctz=America%2FNew_York" class="embed-link justify-self-start"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
   <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8z"/>
 </svg>  Embed</a>
             </div>
           </div>
-          <div class="w-full shrink-0 overflow-hidden p-0 shadow-hero lg:ml-[8.333333%] lg:w-1/3">
-            <img class="max-w-none" src="./assets/images/DLF_Day2_329-0204.jpg" alt="Screenshot from a DLF event" width="720">
-          </div>
-        </div>
+          <img class="hero-photo" src="./assets/images/DLF_Day2_329-0204.jpg" alt="Community members gathered around tables at a DLF event" width="720" height="481">
+        </section>
       </div>
 
-      <div class="page-container">
-        <div id="calendar"></div>
-      </div>
+      <section class="page-container" aria-labelledby="events-heading">
+        <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h2 id="events-heading" class="mb-1 text-2xl font-semibold">Upcoming events</h2>
+            <p id="calendar-timezone" class="text-sm text-muted">Times shown in your local timezone.</p>
+          </div>
+          <ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm" aria-label="Calendar feeds">
+            <li class="flex items-center gap-2"><span class="feed-dot feed-community" aria-hidden="true"></span>Community events</li>
+            <li class="flex items-center gap-2"><span class="feed-dot feed-zoom" aria-hidden="true"></span>DLF Zoom</li>
+          </ul>
+        </div>
+        <div class="calendar-feedback mb-3" id="calendar-feedback" hidden>
+          <p id="calendar-status" role="status" aria-live="polite" aria-atomic="true"></p>
+          <div id="calendar-recovery" class="mt-2 flex flex-wrap items-center gap-4" hidden>
+            <button id="calendar-retry" type="button" class="retry-button">Try again</button>
+            <a href="https://calendar.google.com/calendar/embed?src=g2hval0pee3rmrv4f3n9hp9cok%40group.calendar.google.com" target="_blank" rel="noopener" class="underline">View community calendar in Google Calendar</a>
+          </div>
+        </div>
+        <div id="calendar" aria-label="Community events calendar"></div>
+      </section>
     </main>
 
     <div class="page-container">
       <footer class="my-6 flex flex-wrap items-center justify-between border-t border-line py-4">
-        <div class="flex items-center md:w-1/3">
+        <div class="flex items-center gap-2">
 
           <a href="/" class="mb-4 mr-2 leading-none no-underline md:mb-0">
             <img class="mx-auto block" src="./assets/images/clir.svg" width="24" height="24" alt="CLIR logo">
@@ -75,30 +86,30 @@
         </div>
 
 
-        <ul id="footer-nav" class="mb-0 flex list-none justify-end pl-0 md:w-1/3">
-          <li class="ml-4">
-            <a class="text-muted" target="_blank" href="https://www.linkedin.com/company/digital-library-federation/">
+        <ul id="footer-nav" class="mb-0 flex list-none justify-end gap-1 pl-0">
+          <li>
+            <a class="social-link text-muted" target="_blank" rel="noopener" href="https://www.linkedin.com/company/digital-library-federation/">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
   <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
 </svg><span class="sr-only">LinkedIn</span>
             </a>
           </li>
-          <li class="ml-4">
-            <a class="text-muted" target="_blank" href="https://www.facebook.com/CLIRDLF/">
+          <li>
+            <a class="social-link text-muted" target="_blank" rel="noopener" href="https://www.facebook.com/CLIRDLF/">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
   <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
 </svg><span class="sr-only">Facebook</span>
             </a>
           </li>
-          <li class="ml-4">
-            <a class="text-muted" target="_blank" href="https://www.youtube.com/user/DLFCLIR">
+          <li>
+            <a class="social-link text-muted" target="_blank" rel="noopener" href="https://www.youtube.com/user/DLFCLIR">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
   <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
 </svg><span class="sr-only">YouTube</span>
             </a>
           </li>
-          <li class="ml-4">
-            <a class="text-muted" target="_blank" href="https://lists.clir.org/cgi-bin/wa?A0=DLF-ANNOUNCE">
+          <li>
+            <a class="social-link text-muted" target="_blank" rel="noopener" href="https://lists.clir.org/cgi-bin/wa?A0=DLF-ANNOUNCE">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
   <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
 </svg><span class="sr-only">Email List</span>

@@ -13,9 +13,28 @@ function getEventSources() {
   ];
 }
 
-function createCalendarOptions(plugins, googleCalendarApiKey) {
+function createCalendarOptions(plugins, googleCalendarApiKey, { isMobile = false } = {}) {
   return {
     plugins,
+    initialView: isMobile ? 'listUpcoming' : 'dayGridMonth',
+    timeZone: 'local',
+    height: 'auto',
+    buttons: { listUpcoming: { text: 'Agenda', hint: 'Agenda view' } },
+    todayHint: 'Return to today',
+    prevHint: 'Previous date range',
+    nextHint: 'Next date range',
+    views: {
+      listUpcoming: {
+        type: 'list',
+        duration: { days: 30 },
+        dateIncrement: { days: 30 }
+      },
+      list: {
+        listItemEventClass: 'agenda-event',
+        listItemEventTimeClass: 'agenda-event-time',
+        listItemEventTitleClass: 'agenda-event-title'
+      }
+    },
     toolbarClass: 'calendar-toolbar',
     toolbarSectionClass: 'calendar-toolbar-section',
     toolbarTitleClass: 'calendar-title',
@@ -24,11 +43,11 @@ function createCalendarOptions(plugins, googleCalendarApiKey) {
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
-      right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+      right: 'dayGridMonth,timeGridWeek,timeGridDay,listUpcoming'
     },
     googleCalendarApiKey,
     navLinks: true,
-    editable: true,
+    editable: false,
     dayMaxEvents: true,
     eventSources: getEventSources()
   };

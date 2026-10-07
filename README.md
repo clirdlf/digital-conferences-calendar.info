@@ -22,6 +22,8 @@ The `build` script automatically copies the `CNAME` file into `docs/`.
 
 Tailwind styling and theme tokens are defined in `src/css/styles.css`. The breakpoints, container widths, typography, and button colors preserve the original page design. Vite serves `src/` during development and generates the production site in `docs/`. Each build replaces the previous output, copies the social preview image from `public/`, and emits `CNAME` and `.nojekyll`.
 
+On initial load, small screens open a rolling 30-day agenda; larger screens open the month grid. Visitors can switch views freely. Event times use the visitor’s local timezone, and the legend identifies the two feeds. Events are read-only. Loading failures show a retry control and a Google Calendar fallback.
+
 The calendar uses FullCalendar’s bundled Classic theme, with public palette variables and render-class hooks customized in `src/css/styles.css` and `src/js/calendar-config.js`. Inline SVG icons retain their original shapes without an icon font dependency; their license is in `public/icons-LICENSE.txt`.
 
 And the [FullCalendar Documentation](https://fullcalendar.io/)

@@ -31,12 +31,20 @@ test('createCalendarOptions preserves expected FullCalendar defaults', () => {
   assert.equal(options.plugins, plugins);
   assert.equal(options.googleCalendarApiKey, apiKey);
   assert.equal(options.navLinks, true);
-  assert.equal(options.editable, true);
+  assert.equal(options.editable, false);
   assert.equal(options.dayMaxEvents, true);
   assert.deepEqual(options.headerToolbar, {
     left: 'prev,next today',
     center: 'title',
-    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+    right: 'dayGridMonth,timeGridWeek,timeGridDay,listUpcoming'
   });
   assert.equal(options.eventSources.length, 2);
+});
+
+test('mobile opens a rolling 30-day agenda while desktop keeps the month grid', () => {
+  assert.equal(createCalendarOptions([], '').initialView, 'dayGridMonth');
+  const mobile = createCalendarOptions([], '', { isMobile: true });
+  assert.equal(mobile.initialView, 'listUpcoming');
+  assert.deepEqual(mobile.views.listUpcoming.duration, { days: 30 });
+  assert.equal(mobile.timeZone, 'local');
 });
