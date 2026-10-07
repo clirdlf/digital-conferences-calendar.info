@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
     envDir: projectRoot,
     publicDir: '../public',
     server: { port: 8080 },
-    build: { outDir: '../docs', emptyOutDir: true },
+    build: { outDir: '../dist', emptyOutDir: true },
     plugins: [tailwindcss(), {
       name: 'calendar-site',
       transformIndexHtml(html) {

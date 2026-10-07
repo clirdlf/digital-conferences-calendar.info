@@ -25,7 +25,7 @@ test('calendar key uses shell override and escapes HTML attributes', (t) => {
 
 test('build emits domain and GitHub Pages markers and replaces stale output', () => {
   const config = configure({ mode: 'production' });
-  assert.equal(config.build.outDir, '../docs');
+  assert.equal(config.build.outDir, '../dist');
   assert.equal(config.build.emptyOutDir, true);
   const assets = [];
   config.plugins.find(plugin => plugin.name === 'calendar-site').generateBundle.call({ emitFile: (asset) => assets.push(asset) });
