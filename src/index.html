@@ -75,20 +75,35 @@
       </section>
     </main>
 
-    <div class="page-container">
-      <footer class="my-6 flex flex-wrap items-center justify-between border-t border-line py-4">
-        <div class="flex items-center gap-2">
-
-          <a href="/" class="mb-4 mr-2 leading-none no-underline md:mb-0">
-            <img class="mx-auto block" src="./assets/images/clir.svg" width="24" height="24" alt="CLIR logo">
+    <footer class="site-footer">
+      <div class="page-container footer-layout">
+        <div class="footer-brand">
+          <a href="/" class="footer-home" aria-label="Return to calendar home">
+            <img src="./assets/images/clir.svg" width="64" height="33" alt="CLIR logo">
           </a>
-          <span class="mb-4 text-muted md:mb-0">Maintained with love by the DLF Community <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon text-clir" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
+          <p class="footer-credit">Maintained by the <a class="footer-attribution" href="https://www.diglib.org/">DLF</a> community <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon text-clir" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-</svg></span>
+</svg></p>
         </div>
-
-
-        <ul id="footer-nav" class="mb-0 flex list-none justify-end gap-1 pl-0">
+        <div class="footer-actions">
+          <nav aria-label="Calendar links">
+            <ul class="footer-utility-links">
+              <li><a class="footer-link footer-link-primary" href="mailto:info@diglib.org?subject=Community Calendar Request"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
+  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+</svg><span>Submit an event</span></a></li>
+              <li><a class="footer-link" href="https://www.google.com/calendar/ical/g2hval0pee3rmrv4f3n9hp9cok%40group.calendar.google.com/public/basic.ics"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
+  <path d="M9 7a1 1 0 0 1 1-1h5v2h-5a1 1 0 0 1-1-1M1 9h4a1 1 0 0 1 0 2H1z"/>
+  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+</svg><span>Subscribe</span></a></li>
+              <li><a class="footer-link" href="mailto:info@diglib.org"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
+  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+</svg><span>Contact</span></a></li>
+            </ul>
+          </nav>
+          <div class="footer-social">
+            <p id="footer-social-heading">Connect with DLF</p>
+            <ul id="footer-nav" class="footer-social-links" aria-labelledby="footer-social-heading">
           <li>
             <a class="social-link text-muted" target="_blank" rel="noopener" href="https://www.linkedin.com/company/digital-library-federation/">
               <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
@@ -118,8 +133,10 @@
             </a>
           </li>
         </ul>
-      </footer>
-    </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script type="module" src="./js/main.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NZJTKFEH4"></script>
