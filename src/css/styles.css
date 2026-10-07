@@ -2,17 +2,41 @@
 @source "../index.html";
 @source "../js";
 
+@font-face {
+  font-family: "ABCOtto";
+  src: url("../assets/fonts/Otto/ABCOtto-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABCOtto";
+  src: url("../assets/fonts/Otto/ABCOtto-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABCOtto";
+  src: url("../assets/fonts/Otto/ABCOtto-RegularItalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
 @theme {
   --breakpoint-sm: 36rem;
   --breakpoint-md: 48rem;
   --breakpoint-lg: 62rem;
   --breakpoint-xl: 75rem;
   --breakpoint-2xl: 87.5rem;
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-heading: "Lora", serif;
+  --font-sans: "Instrument Sans", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+  --font-heading: "ABCOtto", Georgia, serif;
   --color-dlf: #236da3;
   --color-clir: #9a1c46;
-  --color-muted: #6c757d;
+  --color-muted: #596575;
   --color-line: #dee2e6;
   --shadow-hero: 0 .5rem 1.5rem rgb(0 0 0 / 7%);
 }
@@ -34,10 +58,12 @@
   .dlf-logo { filter: invert(39%) sepia(82%) saturate(424%) hue-rotate(163deg) brightness(82%) contrast(101%); }
   .site-icon { display: inline-block; vertical-align: -.125em; fill: currentColor; }
   .action-button {
-    display: inline-block; padding-block: .5rem; border: 1px solid; border-radius: .5rem;
-    font-size: 1rem; line-height: 1.5; min-height: 44px; text-align: center; text-decoration: none;
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    padding-block: .5rem; border: 1px solid; border-radius: .5rem;
+    font-size: 1rem; font-weight: 600; line-height: 1.5; min-height: 44px; text-align: center; text-decoration: none;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   }
+  .action-button .site-icon { flex-shrink: 0; }
   .action-primary { color: #fff; background: var(--color-dlf); border-color: var(--color-dlf); }
   .action-primary:hover { background: #1e5d8b; border-color: #1c5782; }
   .action-subscribe { color: var(--color-dlf); border-color: #ccd7e1; background: #fff; }
@@ -56,11 +82,11 @@
   --fc-classic-button-outline: #236da380;
   --fc-classic-primary: #236da3;
   --fc-classic-foreground: #212529;
-  --fc-classic-muted-foreground: #6c757d;
+  --fc-classic-muted-foreground: var(--color-muted);
   --fc-classic-border: #dee2e6;
   --fc-classic-today: #fff3cd;
 }
-.calendar-title { font-size: 1.75rem; font-weight: 700; line-height: 1.2; margin-bottom: .5rem; color: #212529; }
+.calendar-title { font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin-bottom: 0; color: #212529; }
 .calendar-button {
   display: inline-flex; align-items: center; justify-content: center;
   min-height: 44px; min-width: 44px; gap: 0; padding: .375rem .75rem; border: 1px solid #236da3; border-radius: .375rem;
@@ -82,6 +108,7 @@
 /* Compact introduction keeps the calendar close to the top of the page. */
 .hero { display: grid; }
 .hero-copy { padding: 1.25rem; }
+.hero-title { line-height: 1.15; text-wrap: balance; }
 .hero-photo { width: 100%; height: 120px; object-fit: cover; object-position: center 43%; }
 .embed-link { display: inline-flex; align-items: center; gap: .375rem; min-height: 44px; color: #236da3; text-decoration: underline; text-underline-offset: .2em; }
 .embed-link:focus-visible, .social-link:focus-visible { outline: 2px solid #236da3; outline-offset: 3px; border-radius: .25rem; }
@@ -103,7 +130,7 @@
 @media (prefers-reduced-motion: reduce) { .footer-link { transition: none; } }
 .footer-attribution { text-decoration: underline; text-underline-offset: .2em; }
 .site-footer { margin-top: 2rem; border-top: 1px solid var(--color-line); background: #f8fafc; color: var(--color-muted); font-size: .875rem; }
-.footer-layout { display: grid; align-items: start; gap: .5rem; padding-block: 1.25rem; }
+.footer-layout { display: grid; align-items: start; gap: .75rem; padding-block: 1.5rem; }
 .footer-brand { display: flex; align-items: center; gap: .875rem; min-height: 44px; }
 .footer-home { display: inline-flex; align-items: center; flex-shrink: 0; min-height: 44px; }
 .footer-home img { display: block; width: 64px; height: auto; }
@@ -113,6 +140,11 @@
 .footer-utility-links { display: flex; flex-wrap: wrap; gap: .5rem; }
 .footer-social { display: flex; flex-wrap: wrap; align-items: center; column-gap: .75rem; }
 .footer-social-links { display: flex; gap: .125rem; }
+@media (max-width: 22rem) {
+  .footer-utility-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-utility-links li:first-child { grid-column: 1 / -1; }
+  .footer-utility-links .footer-link { width: 100%; }
+}
 .site-footer .social-link { border-radius: .375rem; }
 .site-footer .social-link:hover { background: #eaf0f5; }
 @media (min-width: 48rem) {
@@ -136,7 +168,7 @@ footer a:focus-visible { outline: 2px solid var(--color-dlf); outline-offset: 3p
 @media (max-width: 47.999rem) {
   .calendar-toolbar { display: grid; grid-template-columns: minmax(0, 1fr); gap: .75rem; }
   .calendar-toolbar-section:nth-child(2) { grid-row: 1; }
-  .calendar-title { font-size: 1.375rem; margin-bottom: 0; }
+  .calendar-title { font-size: 1.25rem; }
   .calendar-toolbar-section { width: 100%; }
   .calendar-toolbar-section:last-child .calendar-button-group { width: 100%; }
   .calendar-toolbar-section:last-child .calendar-button { flex: 1; }
@@ -150,7 +182,7 @@ footer a:focus-visible { outline: 2px solid var(--color-dlf); outline-offset: 3p
 .month-event-time { flex-shrink: 0; }
 .month-event-title, .month-row-event-title {
   display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
-  white-space: normal; overflow: hidden; overflow-wrap: anywhere; line-height: 1.35;
+  white-space: normal; overflow: hidden; overflow-wrap: anywhere; font-weight: 600; line-height: 1.35;
 }
 .month-row-event-title { font-size: .8125rem; }
 .event-dialog { margin: auto; width: min(38rem, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); padding: 1.5rem; border: 1px solid #dee2e6; border-radius: .875rem; background: white; color: #212529; box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 20%); overflow-y: auto; }
@@ -160,9 +192,9 @@ footer a:focus-visible { outline: 2px solid var(--color-dlf); outline-offset: 3p
 .event-close:hover { background: #edf4fa; }
 .event-close span { font-size: 1.5rem; }
 .event-close:focus-visible, .event-dialog a:focus-visible { outline: 2px solid #236da3; outline-offset: 3px; }
-.event-dialog-title { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; line-height: 1.3; overflow-wrap: anywhere; margin-bottom: 1.25rem; }
+.event-dialog-title { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; line-height: 1.3; text-wrap: balance; overflow-wrap: anywhere; margin-bottom: 1.25rem; }
 .event-metadata { display: grid; gap: 1rem; margin-bottom: 1.5rem; line-height: 1.5; }
-.event-metadata dt { color: #6c757d; font-size: .875rem; font-weight: 600; margin-bottom: .25rem; }
+.event-metadata dt { color: var(--color-muted); font-size: .875rem; font-weight: 600; margin-bottom: .25rem; }
 #event-location-row[hidden], #event-original-link[hidden] { display: none; }
 #event-description { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.65; font-size: .9375rem; }
 .event-dialog-actions { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #dee2e6; }
