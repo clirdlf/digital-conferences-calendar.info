@@ -18,7 +18,7 @@
     "@tailwindcss/vite": "^4.3.0"
   },
   "dependencies": {
-    "@fullcalendar/google-calendar": "^7.0.2",
+    "@fullcalendar/google-calendar": "^7.1.0",
     "fullcalendar": "^7.0.2",
     "temporal-polyfill": "^1.0.3"
   },

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@fullcalendar/google-calendar':
-        specifier: ^7.0.2
-        version: 7.0.2(temporal-polyfill@1.0.3)
+        specifier: ^7.1.0
+        version: 7.1.0(temporal-polyfill@1.0.3)
       fullcalendar:
         specifier: ^7.0.2
         version: 7.0.2(temporal-polyfill@1.0.3)
@@ -20,18 +20,23 @@ importers:
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.3.0
-        version: 4.3.3(vite@8.3.3(jiti@2.7.0))
+        version: 4.3.3(vite@8.3.2(jiti@2.7.0))
       tailwindcss:
         specifier: ^4.3.0
         version: 4.3.3
       vite:
         specifier: ^8.0.0
-        version: 8.3.3(jiti@2.7.0)
+        version: 8.3.2(jiti@2.7.0)
 
 packages:
 
   '@full-ui/headless-calendar@7.0.2':
     resolution: {integrity: sha512-i6UlTNjBVuiBca5Sq6OoLxFqK6eaQ/v1XOLObjRkzXLuSuNn+qs9/dUvlzrbeesn7QbRH7+u7lyvlQyq8WvmGA==}
+    peerDependencies:
+      temporal-polyfill: ^1.0.1
+
+  '@full-ui/headless-calendar@7.1.0':
+    resolution: {integrity: sha512-T54tSUik/ia9Jj4xduFHv1p98eVBgLnE33Q6qhpg+WWkqKCLBCbtVyMcTPPIOP5jjTV2MbtjrRvRt1RLSryGHA==}
     peerDependencies:
       temporal-polyfill: ^1.0.1
 
@@ -41,8 +46,14 @@ packages:
       '@full-ui/headless-calendar': 7.0.2
       temporal-polyfill: ^1.0.1
 
-  '@fullcalendar/google-calendar@7.0.2':
-    resolution: {integrity: sha512-8HLEsEDVeg3aifmat/+miF7MdzjhGfeCAcuM1AS5Rzr56oY1pHSQWO3VlIRuQDUiVGP92xvB4EXp8ElE6NwWew==}
+  '@fullcalendar/core@7.1.0':
+    resolution: {integrity: sha512-a+ABP7zQpPWpwPT8EsOdShpeOVrJyx/XYStqERd8ibld/FLi/dzpd95r7w3RIdFqFm9iUv0gdGvBshSlI/dbPw==}
+    peerDependencies:
+      '@full-ui/headless-calendar': 7.1.0
+      temporal-polyfill: ^1.0.1
+
+  '@fullcalendar/google-calendar@7.1.0':
+    resolution: {integrity: sha512-5D6TvLPuiFtWVZnedknjBDLkDJQX5d56cvz01q36FiGZwTYUIEnI6gaPFqbKilAlTrzlfjOba0tF+/KiNvLLXg==}
     peerDependencies:
       temporal-polyfill: ^1.0.1
 
@@ -496,8 +507,8 @@ packages:
     resolution: {integrity: sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==}
     engines: {node: '>=12.0.0'}
 
-  vite@8.3.3:
-    resolution: {integrity: sha512-cTAldKPImjg6c+gk48U19POPn3GCBzZwpdsN8ZMEEcbpes+6/wvfqUd0C2y3qYY4wsj8PwgFwrZ/1jBPVttMSg==}
+  vite@8.3.2:
+    resolution: {integrity: sha512-SQr1x6W5vVSbROg7vsyXIaxK9b0G7zsT68acdWWRmnBUsgDieLCRG+Rep9WdZgcposvv/GSnr4GUUBqB3vXq6w==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -545,15 +556,24 @@ snapshots:
     dependencies:
       temporal-polyfill: 1.0.3
 
+  '@full-ui/headless-calendar@7.1.0(temporal-polyfill@1.0.3)':
+    dependencies:
+      temporal-polyfill: 1.0.3
+
   '@fullcalendar/core@7.0.2(@full-ui/headless-calendar@7.0.2(temporal-polyfill@1.0.3))(temporal-polyfill@1.0.3)':
     dependencies:
       '@full-ui/headless-calendar': 7.0.2(temporal-polyfill@1.0.3)
       temporal-polyfill: 1.0.3
 
-  '@fullcalendar/google-calendar@7.0.2(temporal-polyfill@1.0.3)':
+  '@fullcalendar/core@7.1.0(@full-ui/headless-calendar@7.1.0(temporal-polyfill@1.0.3))(temporal-polyfill@1.0.3)':
     dependencies:
-      '@full-ui/headless-calendar': 7.0.2(temporal-polyfill@1.0.3)
-      '@fullcalendar/core': 7.0.2(@full-ui/headless-calendar@7.0.2(temporal-polyfill@1.0.3))(temporal-polyfill@1.0.3)
+      '@full-ui/headless-calendar': 7.1.0(temporal-polyfill@1.0.3)
+      temporal-polyfill: 1.0.3
+
+  '@fullcalendar/google-calendar@7.1.0(temporal-polyfill@1.0.3)':
+    dependencies:
+      '@full-ui/headless-calendar': 7.1.0(temporal-polyfill@1.0.3)
+      '@fullcalendar/core': 7.1.0(@full-ui/headless-calendar@7.1.0(temporal-polyfill@1.0.3))(temporal-polyfill@1.0.3)
       temporal-polyfill: 1.0.3
 
   '@jridgewell/gen-mapping@0.3.13':
@@ -685,12 +705,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.3.3
       '@tailwindcss/oxide-win32-x64-msvc': 4.3.3
 
-  '@tailwindcss/vite@4.3.3(vite@8.3.3(jiti@2.7.0))':
+  '@tailwindcss/vite@4.3.3(vite@8.3.2(jiti@2.7.0))':
     dependencies:
       '@tailwindcss/node': 4.3.3
       '@tailwindcss/oxide': 4.3.3
       tailwindcss: 4.3.3
-      vite: 8.3.3(jiti@2.7.0)
+      vite: 8.3.2(jiti@2.7.0)
 
   detect-libc@2.1.2: {}
 
@@ -876,7 +896,7 @@ snapshots:
       fdir: 6.5.0(picomatch@4.0.7)
       picomatch: 4.0.7
 
-  vite@8.3.3(jiti@2.7.0):
+  vite@8.3.2(jiti@2.7.0):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
