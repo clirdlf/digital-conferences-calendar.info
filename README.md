@@ -9,10 +9,11 @@ The `build` script automatically copies the `CNAME` file into `docs/`.
 ## Development
 
 * Clone the repo
-* Install the dependencies (`npm install`)
-* Start the web server (`npm start`)
-* Edit files in the `src/` directory and preview changes via `npm start`
-* Build for production (`npm run build`)
+* Install the dependencies (`pnpm install`)
+* Start the web server (`pnpm dev`)
+* Edit files in the `src/` directory and preview changes via `pnpm dev`
+* Run tests (`pnpm test`)
+* Build for production (`pnpm build`)
 * Push (`git push`)
 
 ## Bootstrap
