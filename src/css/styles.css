@@ -1,0 +1,83 @@
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../js";
+
+@theme {
+  --breakpoint-sm: 36rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 62rem;
+  --breakpoint-xl: 75rem;
+  --breakpoint-2xl: 87.5rem;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-heading: "Lora", serif;
+  --color-dlf: #236da3;
+  --color-clir: #9a1c46;
+  --color-muted: #6c757d;
+  --color-line: #dee2e6;
+  --shadow-hero: 0 1rem 3rem rgb(0 0 0 / 17.5%);
+}
+
+@layer base {
+  body { color: #212529; font-family: var(--font-sans); font-size: 1rem; line-height: 1.5; }
+}
+
+@utility page-container {
+  width: 100%; margin-inline: auto; padding-inline: .75rem;
+  @media (min-width: 36rem) { max-width: 540px; }
+  @media (min-width: 48rem) { max-width: 720px; }
+  @media (min-width: 62rem) { max-width: 960px; }
+  @media (min-width: 75rem) { max-width: 1140px; }
+  @media (min-width: 87.5rem) { max-width: 1320px; }
+}
+
+@layer components {
+  .dlf-logo { filter: invert(39%) sepia(82%) saturate(424%) hue-rotate(163deg) brightness(82%) contrast(101%); }
+  .site-icon { display: inline-block; vertical-align: -.125em; fill: currentColor; }
+  .action-button {
+    display: inline-block; padding-block: .5rem; border: 1px solid; border-radius: .5rem;
+    font-size: 1.25rem; line-height: 1.5; text-align: center; text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+  .action-primary { color: #fff; background: var(--color-dlf); border-color: var(--color-dlf); }
+  .action-primary:hover { background: #1e5d8b; border-color: #1c5782; }
+  .action-subscribe { color: #198754; border-color: #198754; }
+  .action-subscribe:hover { color: white; background: #198754; }
+  .action-embed { color: #00819b; border-color: #00819b; }
+  .action-embed:hover { color: #000; background: #00819b; }
+  .action-button:focus-visible { outline: 0; box-shadow: 0 0 0 .25rem rgb(35 109 163 / 50%); }
+  .action-subscribe:focus-visible { box-shadow: 0 0 0 .25rem rgb(25 135 84 / 50%); }
+  .action-embed:focus-visible { box-shadow: 0 0 0 .25rem rgb(0 129 155 / 50%); }
+  @media (prefers-reduced-motion: reduce) { .action-button { transition: none; } }
+}
+
+/* Use FullCalendar's public palette and render-class hooks, rather than its generated class names. */
+#calendar {
+  --fc-classic-button: #236da3;
+  --fc-classic-button-border: #236da3;
+  --fc-classic-button-strong: #1c5782;
+  --fc-classic-button-strong-border: #1a527a;
+  --fc-classic-button-outline: #236da380;
+  --fc-classic-primary: #236da3;
+  --fc-classic-foreground: #212529;
+  --fc-classic-muted-foreground: #6c757d;
+  --fc-classic-border: #dee2e6;
+  --fc-classic-today: #fff3cd;
+}
+.calendar-title { font-size: 1.5rem; font-weight: 500; line-height: 1.2; margin-bottom: .5rem; }
+.calendar-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 38px; gap: 0; padding: .375rem .75rem; border: 1px solid #236da3; border-radius: .375rem;
+  background: #236da3; color: #fff; font: inherit; line-height: 1.5; cursor: pointer;
+}
+.calendar-button svg { width: 1em; height: 1em; }
+.calendar-button:hover { background: #1e5d8b; border-color: #1c5782; }
+.calendar-button[aria-pressed="true"], .calendar-button[aria-selected="true"] { background: #1c5782; border-color: #1a527a; }
+.calendar-button:disabled { opacity: .65; cursor: default; }
+.calendar-button:focus-visible { outline: 0; box-shadow: 0 0 0 .25rem #236da380; }
+.calendar-button-group { display: inline-flex; }
+.calendar-button-group .calendar-button { border-radius: 0; }
+.calendar-button-group .calendar-button + .calendar-button { margin-left: -1px; }
+.calendar-button-group .calendar-button:first-child { border-radius: .375rem 0 0 .375rem; }
+.calendar-button-group .calendar-button:last-child { border-radius: 0 .375rem .375rem 0; }
+.calendar-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; }
+.calendar-toolbar-section { display: flex; align-items: center; gap: .75rem; }

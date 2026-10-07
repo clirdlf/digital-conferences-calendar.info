@@ -1,6 +1,6 @@
 # Digital Conferences Calendar
 
-A static web interface for the Digital Conferences Google Calendar, built with Vite, vanilla JavaScript, and Bootstrap.
+A static web interface for the Digital Conferences Google Calendar, built with Vite, vanilla JavaScript, and Tailwind CSS.
 
 ## CNAME
 
@@ -18,11 +18,11 @@ The `build` script automatically copies the `CNAME` file into `docs/`.
 * Preview the production build (`pnpm preview`)
 * Push (`git push`)
 
-## Bootstrap
+## Styling
 
-Bootstrap styling is compiled from `src/scss/styles.scss`. Vite serves `src/` during development and generates the production site in `docs/`. Each build replaces the previous output, copies the social preview image from `public/`, and emits `CNAME` and `.nojekyll`.
+Tailwind styling and theme tokens are defined in `src/css/styles.css`. The breakpoints, container widths, typography, and button colors preserve the original page design. Vite serves `src/` during development and generates the production site in `docs/`. Each build replaces the previous output, copies the social preview image from `public/`, and emits `CNAME` and `.nojekyll`.
 
-Documentation on FullCalendar [bootstrap theme](https://fullcalendar.io/docs/bootstrap5).
+The calendar uses FullCalendar’s bundled Classic theme, with public palette variables and render-class hooks customized in `src/css/styles.css` and `src/js/calendar-config.js`. Inline SVG icons retain their original shapes without an icon font dependency; their license is in `public/icons-LICENSE.txt`.
 
 And the [FullCalendar Documentation](https://fullcalendar.io/)
 

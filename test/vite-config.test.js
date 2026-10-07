@@ -12,7 +12,7 @@ test('calendar key uses shell override and escapes HTML attributes', (t) => {
   });
   process.env.GOOGLE_CALENDAR_API_KEY = 'shell&"<>key';
   const config = configure({ mode: 'production' });
-  assert.equal(config.plugins[0].transformIndexHtml('<meta content="__CALENDAR_API_KEY__">'),
+  assert.equal(config.plugins.find(plugin => plugin.name === 'calendar-site').transformIndexHtml('<meta content="__CALENDAR_API_KEY__">'),
     '<meta content="shell&amp;&quot;&lt;&gt;key">');
 
   delete process.env.GOOGLE_CALENDAR_API_KEY;
@@ -20,7 +20,7 @@ test('calendar key uses shell override and escapes HTML attributes', (t) => {
   const fileKey = loadEnv('production', root, 'GOOGLE_CALENDAR_API_KEY').GOOGLE_CALENDAR_API_KEY ?? '';
   const fromFile = configure({ mode: 'production' });
   const escaped = fileKey.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
-  assert.ok(fromFile.plugins[0].transformIndexHtml('__CALENDAR_API_KEY__') === escaped);
+  assert.ok(fromFile.plugins.find(plugin => plugin.name === 'calendar-site').transformIndexHtml('__CALENDAR_API_KEY__') === escaped);
 });
 
 test('build emits domain and GitHub Pages markers and replaces stale output', () => {
@@ -28,7 +28,7 @@ test('build emits domain and GitHub Pages markers and replaces stale output', ()
   assert.equal(config.build.outDir, '../docs');
   assert.equal(config.build.emptyOutDir, true);
   const assets = [];
-  config.plugins[0].generateBundle.call({ emitFile: (asset) => assets.push(asset) });
+  config.plugins.find(plugin => plugin.name === 'calendar-site').generateBundle.call({ emitFile: (asset) => assets.push(asset) });
   assert.deepEqual(assets, [
     { type: 'asset', fileName: 'CNAME', source: readFileSync(new URL('../CNAME', import.meta.url), 'utf8').trim() + '\n' },
     { type: 'asset', fileName: '.nojekyll', source: '' }

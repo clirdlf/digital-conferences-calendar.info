@@ -16,6 +16,11 @@ function getEventSources() {
 function createCalendarOptions(plugins, googleCalendarApiKey) {
   return {
     plugins,
+    toolbarClass: 'calendar-toolbar',
+    toolbarSectionClass: 'calendar-toolbar-section',
+    toolbarTitleClass: 'calendar-title',
+    buttonClass: 'calendar-button',
+    buttonGroupClass: 'calendar-button-group',
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',

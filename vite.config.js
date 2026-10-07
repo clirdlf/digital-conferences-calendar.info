@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { defineConfig, loadEnv } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 
 const projectRoot = fileURLToPath(new URL('.', import.meta.url));
 const escapeAttribute = (value) => value.replace(/[&"<>]/g, (character) => ({
@@ -17,9 +18,8 @@ export default defineConfig(({ mode }) => {
     envDir: projectRoot,
     publicDir: '../public',
     server: { port: 8080 },
-    css: { preprocessorOptions: { scss: { quietDeps: true } } },
     build: { outDir: '../docs', emptyOutDir: true },
-    plugins: [{
+    plugins: [tailwindcss(), {
       name: 'calendar-site',
       transformIndexHtml(html) {
         return html.replace('__CALENDAR_API_KEY__', escapeAttribute(apiKey));
