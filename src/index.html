@@ -64,6 +64,7 @@
             <li class="flex items-center gap-2"><span class="feed-dot feed-zoom" aria-hidden="true"></span>DLF Zoom</li>
           </ul>
         </div>
+        <p class="mb-3 text-sm text-muted">Select an event to read its details<span class="hidden md:inline">, or choose Agenda to browse full event titles</span>.</p>
         <div class="calendar-feedback mb-3" id="calendar-feedback" hidden>
           <p id="calendar-status" role="status" aria-live="polite" aria-atomic="true"></p>
           <div id="calendar-recovery" class="mt-2 flex flex-wrap items-center gap-4" hidden>
@@ -81,9 +82,12 @@
           <a href="/" class="footer-home" aria-label="Return to calendar home">
             <img src="./assets/images/clir.svg" width="64" height="33" alt="CLIR logo">
           </a>
+          <div>
           <p class="footer-credit">Maintained by the <a class="footer-attribution" href="https://www.diglib.org/">DLF</a> community <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="site-icon text-clir" aria-hidden="true" focusable="false" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
 </svg></p>
+          <p class="footer-program">DLF is a program of <a class="footer-attribution" href="https://www.clir.org/">CLIR</a>.</p>
+          </div>
         </div>
         <div class="footer-actions">
           <nav aria-label="Calendar links">
@@ -137,6 +141,20 @@
         </div>
       </div>
     </footer>
+
+    <dialog id="event-details" class="event-dialog" aria-labelledby="event-title">
+      <div class="event-dialog-header">
+        <p class="text-sm font-semibold text-dlf">Event details</p>
+        <button type="button" class="event-close" data-close-event autofocus aria-label="Close event details"><span aria-hidden="true">×</span> Close</button>
+      </div>
+      <h2 id="event-title" class="event-dialog-title"></h2>
+      <dl class="event-metadata">
+        <div><dt>When</dt><dd id="event-date"></dd><dd id="event-time"></dd></div>
+        <div id="event-location-row" hidden><dt>Where</dt><dd id="event-location"></dd></div>
+      </dl>
+      <div class="event-description-section"><h3 class="mb-2 font-semibold">About this event</h3><p id="event-description"></p></div>
+      <div class="event-dialog-actions"><a id="event-original-link" class="action-button action-primary px-4 font-semibold" target="_blank" rel="noopener noreferrer">Open in Google Calendar <span aria-hidden="true">↗</span></a></div>
+    </dialog>
 
     <script type="module" src="./js/main.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NZJTKFEH4"></script>

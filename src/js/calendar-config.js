@@ -24,6 +24,13 @@ function createCalendarOptions(plugins, googleCalendarApiKey, { isMobile = false
     prevHint: 'Previous date range',
     nextHint: 'Next date range',
     views: {
+      dayGridMonth: {
+        listItemEventClass: 'month-event',
+        listItemEventInnerClass: 'month-event-inner',
+        listItemEventTimeClass: 'month-event-time',
+        listItemEventTitleClass: 'month-event-title',
+        rowEventTitleClass: 'month-row-event-title'
+      },
       listUpcoming: {
         type: 'list',
         duration: { days: 30 },

@@ -1,4 +1,5 @@
 import { createCalendarOptions } from './calendar-config.js';
+import { bindEventDetails } from './event-details.js';
 
 function registerCalendar(document, Calendar, plugins) {
   document.addEventListener('DOMContentLoaded', function() {
@@ -7,6 +8,8 @@ function registerCalendar(document, Calendar, plugins) {
     const googleCalendarApiKey = apiKeyMeta ? apiKeyMeta.content : '';
     const isMobile = document.defaultView?.matchMedia('(max-width: 767px)').matches ?? false;
     const options = createCalendarOptions(plugins, googleCalendarApiKey, { isMobile });
+    const eventClick = bindEventDetails(document);
+    if (eventClick) options.eventClick = eventClick;
     const timezoneEl = document.getElementById('calendar-timezone');
     const feedbackEl = document.getElementById('calendar-feedback');
     const statusEl = document.getElementById('calendar-status');
