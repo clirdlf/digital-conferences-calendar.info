@@ -2,30 +2,19 @@
   "name": "clean-calendar",
   "version": "1.3.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "clean": "rm -rf docs/",
-    "dev": "webpack serve --open --mode development",
-    "build": "webpack build --mode production",
-    "test": "node --test"
+    "dev": "vite --open",
+    "build": "vite build",
+    "test": "node --test",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.5.4",
-    "css-loader": "^7.1.4",
-    "file-loader": "^6.2.0",
-    "html-loader": "^5.1.0",
-    "html-webpack-plugin": "^5.6.8",
-    "mini-css-extract-plugin": "^2.10.2",
-    "postcss-loader": "^8.2.1",
     "sass": "^1.102.0",
-    "sass-loader": "^17.0.0",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.109.2",
-    "webpack-cli": "^7.2.2",
-    "webpack-dev-server": "^5.2.6"
+    "vite": "^8.0.0"
   },
   "dependencies": {
     "@fullcalendar/bootstrap5": "^7.0.2",
@@ -35,5 +24,6 @@
     "bootstrap-icons": "^1.13.1",
     "fullcalendar": "^7.0.2",
     "temporal-polyfill": "^1.0.3"
-  }
+  },
+  "type": "module"
 }

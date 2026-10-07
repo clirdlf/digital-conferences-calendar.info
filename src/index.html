@@ -9,16 +9,16 @@
     <meta property="og:title" content="DLF Community Calendar">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://digital-conferences-calendar.info/">
-    <meta property="og:image" content="<%= require('./assets/images/DLF_logo.png') %>">
-    <meta name="google-calendar-api-key" content="<%= htmlWebpackPlugin.options.googleCalendarApiKey || '' %>">
+    <meta property="og:image" content="https://digital-conferences-calendar.info/DLF_logo.png">
+    <meta name="google-calendar-api-key" content="__CALENDAR_API_KEY__">
 
-    <link rel="apple-touch-icon" href="<%= require('./icon.png') %>">
+    <link rel="apple-touch-icon" href="./icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./main.css">
+    <link rel="icon" href="./favicon.ico">
 
     <meta name="theme-color" content="#fafafa">
   </head>
@@ -31,7 +31,7 @@
 
             <h1 class="display-4 fw-bold lh-1">
               DLF Community Calendar
-            </h1> 
+            </h1>
             <p class="lead">What's on in digital libraries &amp; archives, DH, museums &amp; cultural heritage, data curation, open
               science, digital publishing &amp; more?
             </p>
@@ -44,7 +44,7 @@
             </div>
           </div>
           <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-            <img class="rounded-lg-3" src="<%= require('./assets/images/DLF_Day2_329-0204.jpg') %>" alt="Screenshot from a DLF event" width="720">
+            <img class="rounded-lg-3" src="./assets/images/DLF_Day2_329-0204.jpg" alt="Screenshot from a DLF event" width="720">
           </div>
         </div>
       </div>
@@ -59,12 +59,12 @@
         <div class="col-md-4 d-flex align-items-center">
 
           <a href="/" class="mb-3 me-2 mb-md-0 text-decoration-none lh-1">
-            <img class="d-block mx-auto clir-logo" src="<%= require('./assets/images/clir.svg') %>" width="24" height="24" alt="CLIR logo">
+            <img class="d-block mx-auto clir-logo" src="./assets/images/clir.svg" width="24" height="24" alt="CLIR logo">
           </a>
           <span class="mb-3 mb-md-0 text-muted">Maintained with love by the DLF Community <i class="bi bi-heart-fill"></i></span>
         </div>
 
-    
+
         <ul id="footer-nav" class="nav col-md-4 justify-content-end list-unstyled d-flex">
           <li class="ms-3">
             <a class="text-muted" target="_blank" href="https://www.linkedin.com/company/digital-library-federation/">
@@ -90,7 +90,7 @@
       </footer>
     </div>
 
-    <script src="./main.js"></script>
+    <script type="module" src="./js/main.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NZJTKFEH4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];

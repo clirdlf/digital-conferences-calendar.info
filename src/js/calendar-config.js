@@ -16,7 +16,6 @@ function getEventSources() {
 function createCalendarOptions(plugins, googleCalendarApiKey) {
   return {
     plugins,
-    themeSystem: 'bootstrap5',
     headerToolbar: {
       left: 'prev,next today',
       center: 'title',
@@ -30,7 +29,7 @@ function createCalendarOptions(plugins, googleCalendarApiKey) {
   };
 }
 
-module.exports = {
+export {
   createCalendarOptions,
   getEventSources
 };

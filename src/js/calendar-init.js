@@ -1,4 +1,4 @@
-const { createCalendarOptions } = require('./calendar-config');
+import { createCalendarOptions } from './calendar-config.js';
 
 function registerCalendar(document, Calendar, plugins) {
   document.addEventListener('DOMContentLoaded', function() {
@@ -12,4 +12,4 @@ function registerCalendar(document, Calendar, plugins) {
   });
 }
 
-module.exports = { registerCalendar };
+export { registerCalendar };

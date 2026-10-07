@@ -1,6 +1,6 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
-const { registerCalendar } = require('../calendar-init');
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { registerCalendar } from '../calendar-init.js';
 
 for (const apiKey of ['test-api-key', null]) {
   test(`initializes and renders the calendar on DOMContentLoaded ${apiKey ? 'with' : 'without'} an API key`, () => {

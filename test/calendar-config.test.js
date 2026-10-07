@@ -1,10 +1,10 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
+import test from 'node:test';
+import assert from 'node:assert/strict';
 
-const {
+import {
   createCalendarOptions,
   getEventSources
-} = require('../src/js/calendar-config');
+} from '../src/js/calendar-config.js';
 
 test('getEventSources returns expected calendar feeds', () => {
   const sources = getEventSources();
@@ -29,7 +29,6 @@ test('createCalendarOptions preserves expected FullCalendar defaults', () => {
   const options = createCalendarOptions(plugins, apiKey);
 
   assert.equal(options.plugins, plugins);
-  assert.equal(options.themeSystem, 'bootstrap5');
   assert.equal(options.googleCalendarApiKey, apiKey);
   assert.equal(options.navLinks, true);
   assert.equal(options.editable, true);

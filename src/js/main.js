@@ -15,7 +15,7 @@ import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import listPlugin from 'fullcalendar/list';
 import 'fullcalendar/skeleton.css';
 import '@fullcalendar/bootstrap5/theme.css';
-import calendarInit from './calendar-init';
+import { registerCalendar } from './calendar-init.js';
 
 const plugins = [
   interactionPlugin,
@@ -26,4 +26,4 @@ const plugins = [
   listPlugin
 ];
 
-calendarInit.registerCalendar(document, Calendar, plugins);
+registerCalendar(document, Calendar, plugins);
