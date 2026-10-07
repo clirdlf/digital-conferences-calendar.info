@@ -2,22 +2,77 @@
 
 A static web interface for the Digital Conferences Google Calendar, built with Vite, vanilla JavaScript, and Tailwind CSS.
 
-## CNAME
+## Local development
 
-The `build` script automatically copies the `CNAME` file into `dist/`. The custom domain is also configured in the repository's GitHub Pages settings.
+### 1. Install the tools and clone the repository
 
-## Development
+Install Node.js **24.21.0** using your preferred Node version manager. The version is pinned in `.node-version` so local development and CI can use the same runtime. Install pnpm **12.9.1**, matching the `packageManager` field in `package.json`:
 
-* Use Node.js 24.21.0 (pinned in `.node-version`) and pnpm 12.9.1 (pinned in `package.json`)
-* Clone the repo
-* Install the dependencies (`pnpm install --frozen-lockfile`)
-* Start the web server (`pnpm dev`)
-* Edit files in the `src/` directory and preview changes via `pnpm dev`
-* Run tests (`pnpm test`)
-* Build for production (`pnpm build`)
-* Preview the production build (`pnpm preview`)
-* Open a pull request into `main`; CI runs tests and a production build
-* Merge to `main` to deploy automatically to GitHub Pages
+```sh
+npm install --global pnpm@12.9.1
+node --version
+pnpm --version
+```
+
+The version checks should print `v24.21.0` and `12.9.1`. Alternative installation methods are covered in the [pnpm installation guide](https://pnpm.io/installation).
+
+```sh
+git clone https://github.com/clirdlf/digital-conferences-calendar.info.git
+cd digital-conferences-calendar.info
+pnpm install --frozen-lockfile
+```
+
+Use pnpm for dependency changes and commit the updated `pnpm-lock.yaml` with them. A frozen install deliberately fails if `package.json` and the lockfile disagree; after an intentional dependency change, run `pnpm install` to update the lockfile.
+
+### 2. Configure the calendar feeds
+
+Create a local environment file:
+
+```sh
+cp .env.example .env
+```
+
+In `.env`, replace `your-google-calendar-api-key` with a Google Calendar API key:
+
+```dotenv
+GOOGLE_CALENDAR_API_KEY=your-google-calendar-api-key
+```
+
+Enable the [Google Calendar API](https://developers.google.com/workspace/calendar/api/quickstart/js#enable_the_api) for the key's Google Cloud project. Allow your local development URL in its website referrer restrictions, such as `http://localhost:8080/*`. If you use `127.0.0.1` or a different port, allow that URL too. For a production preview, allow the URL printed by the preview server. Keep the API restriction limited to the Google Calendar API.
+
+The key is included in the browser page to read the public feeds. `.env` is ignored by Git; do not commit it. The GitHub Actions repository variable does not automatically populate your local environment.
+
+You can run tests and work on the page layout without a valid key, but loading live events requires one. Calendar setup is described in the [FullCalendar Google Calendar documentation](https://fullcalendar.io/docs/google-calendar).
+
+### 3. Start the development server
+
+```sh
+pnpm dev
+```
+
+Vite opens the site in your browser and serves it on port **8080**. Use the URL printed in the terminal if that port is occupied. Edit files in `src/`; the browser updates as you save. Stop the server with **Ctrl+C**.
+
+Restart the development server after changing `.env`. Shell environment variables override `.env` values; mode-specific files such as `.env.production` can provide separate build configuration.
+
+### 4. Test and preview a production build
+
+```sh
+pnpm test
+pnpm build
+pnpm preview
+```
+
+Open the URL printed by the preview server. Preview serves the generated `dist/` output, so run `pnpm build` again after changing source files or the build-time calendar key.
+
+| Command | Purpose |
+| --- | --- |
+| `pnpm dev` | Start development with live updates |
+| `pnpm test` | Run the Node.js test suite |
+| `pnpm build` | Generate the production site in `dist/` |
+| `pnpm preview` | Serve the latest production build locally |
+| `pnpm clean` | Remove the generated `dist/` directory |
+
+Open a pull request into `main` when your changes are ready. CI runs tests and a production build; merging to `main` deploys the site automatically.
 
 ## Deployment
 
@@ -29,6 +84,8 @@ In GitHub **Settings → Secrets and variables → Actions → Variables**, set 
 
 In **Settings → Pages**, use **GitHub Actions** as the publishing source and keep the custom domain `digital-conferences-calendar.info`. Enable this before merging the migration that removes the legacy `docs/` output. The existing published site remains in place until an Actions deployment succeeds. Set the `github-pages` environment's deployment branch policy to `main` if managing environment protection rules; the workflow itself also restricts deployment to `main`.
 
+The build copies the root `CNAME` file into `dist/` and emits `.nojekyll`. The custom domain must also be configured in GitHub Pages settings.
+
 ## Styling
 
 Tailwind styling and theme tokens are defined in `src/css/styles.css`. ABCOtto is served from local font assets for headings; Instrument Sans is loaded through Google Fonts for body text and controls. Vite serves `src/` during development and generates the production site in `dist/`. Each build replaces the previous output, copies the social preview image from `public/`, and emits `CNAME` and `.nojekyll`.
@@ -37,11 +94,4 @@ On initial load, small screens open a rolling 30-day agenda; larger screens open
 
 The calendar uses FullCalendar’s bundled Classic theme, with public palette variables and render-class hooks customized in `src/css/styles.css` and `src/js/calendar-config.js`. Inline SVG icons retain their original shapes without an icon font dependency; their license is in `public/icons-LICENSE.txt`.
 
-And the [FullCalendar Documentation](https://fullcalendar.io/)
-
-## Google Calendar
-
-See [FullCalendar docs](https://fullcalendar.io/docs/google-calendar) (especially the setup for API calls)
-Copy `.env.example` to `.env` and set `GOOGLE_CALENDAR_API_KEY`, or provide that variable in the shell/build environment. Shell variables take precedence over `.env` files. Vite also supports mode-specific files such as `.env.production`. Restart the development server after changing these values.
-
-This key is included in the public page to access the public Google Calendar feeds. Restrict it to the Google Calendar API and the appropriate website referrers in Google Cloud.
+For calendar customization, see the [FullCalendar documentation](https://fullcalendar.io/).

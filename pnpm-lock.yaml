@@ -167,40 +167,40 @@ importers:
   .:
     dependencies:
       '@fullcalendar/google-calendar':
-        specifier: ^7.0.2
-        version: 7.0.2(temporal-polyfill@1.0.3)
+        specifier: ^7.1.1
+        version: 7.1.1(temporal-polyfill@1.0.5)
       fullcalendar:
-        specifier: ^7.0.2
-        version: 7.0.2(temporal-polyfill@1.0.3)
+        specifier: ^7.1.1
+        version: 7.1.1(temporal-polyfill@1.0.5)
       temporal-polyfill:
-        specifier: ^1.0.3
-        version: 1.0.3
+        specifier: ^1.0.5
+        version: 1.0.5
     devDependencies:
       '@tailwindcss/vite':
-        specifier: ^4.3.0
+        specifier: ^4.3.3
         version: 4.3.3(vite@8.3.3(jiti@2.7.0))
       tailwindcss:
-        specifier: ^4.3.0
+        specifier: ^4.3.3
         version: 4.3.3
       vite:
-        specifier: ^8.0.0
+        specifier: ^8.3.3
         version: 8.3.3(jiti@2.7.0)
 
 packages:
 
-  '@full-ui/headless-calendar@7.0.2':
-    resolution: {integrity: sha512-i6UlTNjBVuiBca5Sq6OoLxFqK6eaQ/v1XOLObjRkzXLuSuNn+qs9/dUvlzrbeesn7QbRH7+u7lyvlQyq8WvmGA==}
+  '@full-ui/headless-calendar@7.1.1':
+    resolution: {integrity: sha512-WaZw5t4K+JlLDw/1ucnjnOznXJJ/86bZWgeNIh8Xac62/+nn0VMO4HqCFKk9ylFnrng4zLy4iAjkFuH6jjS3Ow==}
     peerDependencies:
       temporal-polyfill: ^1.0.1
 
-  '@fullcalendar/core@7.0.2':
-    resolution: {integrity: sha512-EkhE1wkPttp5kKNmUNLsMwl8nUuQmLdj30SPKagOEWMJUE4AHETAu/F/SbYoRq+nksm2GWPe9cQs1kbQP2H9pA==}
+  '@fullcalendar/core@7.1.1':
+    resolution: {integrity: sha512-QYTmaq52uxvGLk9EX60p+4zYIE+baGDdbYEITW4iovevohlpl1Jg7u3X2hfW1//yk0cs7d1Kd3yOBcaMnObITg==}
     peerDependencies:
-      '@full-ui/headless-calendar': 7.0.2
+      '@full-ui/headless-calendar': 7.1.1
       temporal-polyfill: ^1.0.1
 
-  '@fullcalendar/google-calendar@7.0.2':
-    resolution: {integrity: sha512-8HLEsEDVeg3aifmat/+miF7MdzjhGfeCAcuM1AS5Rzr56oY1pHSQWO3VlIRuQDUiVGP92xvB4EXp8ElE6NwWew==}
+  '@fullcalendar/google-calendar@7.1.1':
+    resolution: {integrity: sha512-bU3L9AbE/sOnqOoZvAeybX7aqT0mlmyiNMh5fJSk/MlVXlOFi0LCloHwlIVhbeOuulcxGip+pRENKi4F+4qVew==}
     peerDependencies:
       temporal-polyfill: ^1.0.1
 
@@ -438,8 +438,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  fullcalendar@7.0.2:
-    resolution: {integrity: sha512-xqt/4CrnabOUVfu5PExyc6plbwH8QA1jAusRw6JOUfS+BmpA19W74lNLDty6EO0H+2cm/qVMza4TgQiJLHPAqQ==}
+  fullcalendar@7.1.1:
+    resolution: {integrity: sha512-W+0ji7pvvb4miUMLHXnx86GgA3uRVqGfxJRg1Ibph9w9jbMVyydDv26XuoH7LjS7Q6MRTkzNEw2UxO/3Q3L/+w==}
     peerDependencies:
       temporal-polyfill: ^1.0.1
 
@@ -641,14 +641,14 @@ packages:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
 
-  temporal-polyfill@1.0.3:
-    resolution: {integrity: sha512-U8vuzZBc+dfMIfl8wXWcedfI7AJCxJjjVBIRpJUvIz5+UAp555UJDHguKsfZqHWaHRSdVUThm7mqqIWhN/xPBQ==}
+  temporal-polyfill@1.0.5:
+    resolution: {integrity: sha512-+H/mmY74i6wXCMcjIhGuSnODcyZnc4eois2myhOyX0UqRAKNXQY5m9iB1en5jQ/n4SXtjLXo1ElBI5bmn8tZwQ==}
 
   temporal-spec@1.0.1:
     resolution: {integrity: sha512-wxVoanmDeavXie1vu2JaQ3WIc3JZnWAOYFBsJyATaVsXsycKYUflGsyBmrRSnoCpZJpwPyr38VpgSUlQ8CbFxg==}
 
-  temporal-utils@1.0.1:
-    resolution: {integrity: sha512-HAixuesxFQIUaQk3ptX2jhfO/FsOkgVkDDMawvp6n/fkB1q6BKfs3lURw9I+pK/2e2e/q/vrLrxmeqauBoyGMQ==}
+  temporal-utils@1.0.3:
+    resolution: {integrity: sha512-9jbTSX3HvkOWvDpNpFzwX/d1mkCrgQgwLmVTOEiuocZGKHsrQJtttGZFmybJ2zYP5zCSZuU5ZyeS8+eOEPABiQ==}
 
   tinyglobby@0.2.17:
     resolution: {integrity: sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==}
@@ -699,20 +699,20 @@ packages:
 
 snapshots:
 
-  '@full-ui/headless-calendar@7.0.2(temporal-polyfill@1.0.3)':
+  '@full-ui/headless-calendar@7.1.1(temporal-polyfill@1.0.5)':
     dependencies:
-      temporal-polyfill: 1.0.3
+      temporal-polyfill: 1.0.5
 
-  '@fullcalendar/core@7.0.2(@full-ui/headless-calendar@7.0.2(temporal-polyfill@1.0.3))(temporal-polyfill@1.0.3)':
+  '@fullcalendar/core@7.1.1(@full-ui/headless-calendar@7.1.1(temporal-polyfill@1.0.5))(temporal-polyfill@1.0.5)':
     dependencies:
-      '@full-ui/headless-calendar': 7.0.2(temporal-polyfill@1.0.3)
-      temporal-polyfill: 1.0.3
+      '@full-ui/headless-calendar': 7.1.1(temporal-polyfill@1.0.5)
+      temporal-polyfill: 1.0.5
 
-  '@fullcalendar/google-calendar@7.0.2(temporal-polyfill@1.0.3)':
+  '@fullcalendar/google-calendar@7.1.1(temporal-polyfill@1.0.5)':
     dependencies:
-      '@full-ui/headless-calendar': 7.0.2(temporal-polyfill@1.0.3)
-      '@fullcalendar/core': 7.0.2(@full-ui/headless-calendar@7.0.2(temporal-polyfill@1.0.3))(temporal-polyfill@1.0.3)
-      temporal-polyfill: 1.0.3
+      '@full-ui/headless-calendar': 7.1.1(temporal-polyfill@1.0.5)
+      '@fullcalendar/core': 7.1.1(@full-ui/headless-calendar@7.1.1(temporal-polyfill@1.0.5))(temporal-polyfill@1.0.5)
+      temporal-polyfill: 1.0.5
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -864,12 +864,12 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  fullcalendar@7.0.2(temporal-polyfill@1.0.3):
+  fullcalendar@7.1.1(temporal-polyfill@1.0.5):
     dependencies:
-      '@full-ui/headless-calendar': 7.0.2(temporal-polyfill@1.0.3)
-      '@fullcalendar/core': 7.0.2(@full-ui/headless-calendar@7.0.2(temporal-polyfill@1.0.3))(temporal-polyfill@1.0.3)
+      '@full-ui/headless-calendar': 7.1.1(temporal-polyfill@1.0.5)
+      '@fullcalendar/core': 7.1.1(@full-ui/headless-calendar@7.1.1(temporal-polyfill@1.0.5))(temporal-polyfill@1.0.5)
       preact: 10.29.8
-      temporal-polyfill: 1.0.3
+      temporal-polyfill: 1.0.5
     transitivePeerDependencies:
       - preact-render-to-string
 
@@ -1020,14 +1020,14 @@ snapshots:
 
   tapable@2.3.3: {}
 
-  temporal-polyfill@1.0.3:
+  temporal-polyfill@1.0.5:
     dependencies:
       temporal-spec: 1.0.1
-      temporal-utils: 1.0.1
+      temporal-utils: 1.0.3
 
   temporal-spec@1.0.1: {}
 
-  temporal-utils@1.0.1: {}
+  temporal-utils@1.0.3: {}
 
   tinyglobby@0.2.17:
     dependencies:

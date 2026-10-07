@@ -17,14 +17,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vite": "^8.0.0",
-    "tailwindcss": "^4.3.0",
-    "@tailwindcss/vite": "^4.3.0"
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.3"
   },
   "dependencies": {
-    "@fullcalendar/google-calendar": "^7.0.2",
-    "fullcalendar": "^7.0.2",
-    "temporal-polyfill": "^1.0.3"
+    "@fullcalendar/google-calendar": "^7.1.1",
+    "fullcalendar": "^7.1.1",
+    "temporal-polyfill": "^1.0.5"
   },
   "type": "module"
 }
