@@ -1,7 +1,7 @@
 {
   "name": "clean-calendar",
   "version": "2.0.0",
-  "packageManager": "pnpm@12.9.1",
+  "packageManager": "pnpm@12.11.2",
   "engines": {
     "node": ">=24.21.0"
   },
@@ -19,7 +19,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
     "tailwindcss": "^4.3.3",
-    "vite": "^8.3.3"
+    "vite": "^8.3.4"
   },
   "dependencies": {
     "@fullcalendar/google-calendar": "^7.1.1",
