@@ -167,8 +167,8 @@ importers:
   .:
     dependencies:
       '@fullcalendar/google-calendar':
-        specifier: ^7.1.1
-        version: 7.1.1(temporal-polyfill@1.0.5)
+        specifier: ^7.1.3
+        version: 7.1.3(temporal-polyfill@1.0.5)
       fullcalendar:
         specifier: ^7.1.1
         version: 7.1.1(temporal-polyfill@1.0.5)
@@ -193,14 +193,25 @@ packages:
     peerDependencies:
       temporal-polyfill: ^1.0.1
 
+  '@full-ui/headless-calendar@7.1.3':
+    resolution: {integrity: sha512-CFomIp87osqY65Hlu2c0e2ZnofBe9tKOO8IoPzIfSPVDK/+aGz4Itj6mLu4xPjIvzRDQiopcVzYlip6u1bvYxw==}
+    peerDependencies:
+      temporal-polyfill: ^1.0.1
+
   '@fullcalendar/core@7.1.1':
     resolution: {integrity: sha512-QYTmaq52uxvGLk9EX60p+4zYIE+baGDdbYEITW4iovevohlpl1Jg7u3X2hfW1//yk0cs7d1Kd3yOBcaMnObITg==}
     peerDependencies:
       '@full-ui/headless-calendar': 7.1.1
       temporal-polyfill: ^1.0.1
 
-  '@fullcalendar/google-calendar@7.1.1':
-    resolution: {integrity: sha512-bU3L9AbE/sOnqOoZvAeybX7aqT0mlmyiNMh5fJSk/MlVXlOFi0LCloHwlIVhbeOuulcxGip+pRENKi4F+4qVew==}
+  '@fullcalendar/core@7.1.3':
+    resolution: {integrity: sha512-DLGXqX7CnuUQHH679FgE6+jc927wa708ydIcnfVx372IOK/OiDZjqc+IBwuKnu2EyqleCooDoAnUAcvXBhHosA==}
+    peerDependencies:
+      '@full-ui/headless-calendar': 7.1.3
+      temporal-polyfill: ^1.0.1
+
+  '@fullcalendar/google-calendar@7.1.3':
+    resolution: {integrity: sha512-ZUBZRhPbpnjAiawkR+qwsmCIgEujeSYjLhjyVmtE4k1QhTMpbB6kVySrdoEatjhMA9HolXZye0a6KagnCFZafg==}
     peerDependencies:
       temporal-polyfill: ^1.0.1
 
@@ -703,15 +714,24 @@ snapshots:
     dependencies:
       temporal-polyfill: 1.0.5
 
+  '@full-ui/headless-calendar@7.1.3(temporal-polyfill@1.0.5)':
+    dependencies:
+      temporal-polyfill: 1.0.5
+
   '@fullcalendar/core@7.1.1(@full-ui/headless-calendar@7.1.1(temporal-polyfill@1.0.5))(temporal-polyfill@1.0.5)':
     dependencies:
       '@full-ui/headless-calendar': 7.1.1(temporal-polyfill@1.0.5)
       temporal-polyfill: 1.0.5
 
-  '@fullcalendar/google-calendar@7.1.1(temporal-polyfill@1.0.5)':
+  '@fullcalendar/core@7.1.3(@full-ui/headless-calendar@7.1.3(temporal-polyfill@1.0.5))(temporal-polyfill@1.0.5)':
     dependencies:
-      '@full-ui/headless-calendar': 7.1.1(temporal-polyfill@1.0.5)
-      '@fullcalendar/core': 7.1.1(@full-ui/headless-calendar@7.1.1(temporal-polyfill@1.0.5))(temporal-polyfill@1.0.5)
+      '@full-ui/headless-calendar': 7.1.3(temporal-polyfill@1.0.5)
+      temporal-polyfill: 1.0.5
+
+  '@fullcalendar/google-calendar@7.1.3(temporal-polyfill@1.0.5)':
+    dependencies:
+      '@full-ui/headless-calendar': 7.1.3(temporal-polyfill@1.0.5)
+      '@fullcalendar/core': 7.1.3(@full-ui/headless-calendar@7.1.3(temporal-polyfill@1.0.5))(temporal-polyfill@1.0.5)
       temporal-polyfill: 1.0.5
 
   '@jridgewell/gen-mapping@0.3.13':
