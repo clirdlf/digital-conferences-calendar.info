@@ -24,7 +24,7 @@
   "dependencies": {
     "@fullcalendar/google-calendar": "^7.1.1",
     "fullcalendar": "^7.1.1",
-    "temporal-polyfill": "^1.0.5"
+    "temporal-polyfill": "^1.0.6"
   },
   "type": "module"
 }
